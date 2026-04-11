@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="OWP_LIB/OWP_LIB.csproj" />
+  <Project Path="OWP_LIB_tests/OWP_LIB_tests.csproj" Id="b351dc3b-99db-452b-9f27-f677e6684830" />
+</Solution>
