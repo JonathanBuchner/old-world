@@ -2,7 +2,12 @@ namespace ow_gen_lib.Enums.Equipment
 {
     public enum EquipmentType
     {
+        None,
         Weapon,
-        Armor
+        Armor,
+        Talisman,
+        Enchanted,
+        Arcane,
+        Banner
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ow_gen_lib.Enums.Dice
 {
-    public enum DiceType
+    public enum Dice_DiceType
     {
         D6,       // Standard six-sided die
         D3,       // Represents results 1-3 with equal probability

@@ -6,9 +6,9 @@ namespace ow_gen_lib.Models.Dice
 {
     public sealed class D3Die : Die
     {
-        private static readonly string[] _faces = Enum.GetNames<D3DieResult>();
+        private static readonly string[] _faces = Enum.GetNames<Dice_D3DieResult>();
 
-        public D3Die() : base(DiceType.D3)
+        public D3Die() : base(Dice_DiceType.D3)
         {
         }
 
@@ -21,7 +21,7 @@ namespace ow_gen_lib.Models.Dice
 
         public override Enum RollEnum()
         {
-            return (D3DieResult) Roll();
+            return (Dice_D3DieResult) Roll();
         }
     }
 }

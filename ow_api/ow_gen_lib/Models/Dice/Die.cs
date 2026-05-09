@@ -8,12 +8,12 @@ namespace ow_gen_lib.Models.Dice
     {
         protected static readonly Random Random = Random.Shared;
 
-        protected Die(DiceType diceType)
+        protected Die(Dice_DiceType diceType)
         {
             DiceType = diceType;
         }
 
-        public DiceType DiceType { get; }
+        public Dice_DiceType DiceType { get; }
 
         public abstract IReadOnlyList<string> Faces { get; }
 

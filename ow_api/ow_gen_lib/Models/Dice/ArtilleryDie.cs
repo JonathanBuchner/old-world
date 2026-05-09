@@ -6,18 +6,18 @@ namespace ow_gen_lib.Models.Dice
 {
     public sealed class ArtilleryDie : Die
     {
-        private static readonly string[] _faces = Enum.GetNames<ArtilleryDieResult>();
-        private static readonly ArtilleryDieResult[] _results =
+        private static readonly string[] _faces = Enum.GetNames<Dice_ArtilleryDieResult>();
+        private static readonly Dice_ArtilleryDieResult[] _results =
         {
-            ArtilleryDieResult.Two,
-            ArtilleryDieResult.Four,
-            ArtilleryDieResult.Six,
-            ArtilleryDieResult.Eight,
-            ArtilleryDieResult.Ten,
-            ArtilleryDieResult.Misfire
+            Dice_ArtilleryDieResult.Two,
+            Dice_ArtilleryDieResult.Four,
+            Dice_ArtilleryDieResult.Six,
+            Dice_ArtilleryDieResult.Eight,
+            Dice_ArtilleryDieResult.Ten,
+            Dice_ArtilleryDieResult.Misfire
         };
 
-        public ArtilleryDie() : base(DiceType.DA)
+        public ArtilleryDie() : base(Dice_DiceType.DA)
         {
         }
 

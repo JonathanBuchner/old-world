@@ -1,6 +1,6 @@
 namespace ow_gen_lib.Enums.Dice
 {
-    public enum ArtilleryDieResult
+    public enum Dice_ArtilleryDieResult
     {
         Misfire = -1,
         Two = 2,

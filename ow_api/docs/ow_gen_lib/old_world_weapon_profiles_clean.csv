@@ -1,0 +1,66 @@
+Weapon,Profile,Category/Faction,MinRange,MaxRange,StrType,Str,StrengthPlus,ArmourPiercing,ArmourBane,SpecialRules,Source
+Hand Weapon,Default,Rulebook Combat,0,0,user,-1,0,-1,-1,-1,https://tow.whfb.app/weapons-of-war/hand-weapon
+Two Hand Weapons / Additional Hand Weapon,Default,Rulebook Combat,0,0,user,-1,0,-1,-1,-1,https://tow.whfb.app/weapons-of-war/two-hand-weapons-additional-hand-weapon
+Flail,Default,Rulebook Combat,0,0,user,-1,+2,-2,Armour Bane (1),-1,https://tow.whfb.app/weapons-of-war/flail
+Great Weapon,Default,Rulebook Combat,0,0,user,-1,+2,-2,-1,-1,https://tow.whfb.app/weapons-of-war/great-weapon
+Halberd,Default,Rulebook Combat,0,0,user,-1,+1,-1(-2),-1,-1,https://tow.whfb.app/weapons-of-war/halberd
+Morning Star,Default,Rulebook Combat,0,0,user,-1,+1,-1,Armour Bane (1),-1,https://tow.whfb.app/weapons-of-war/morning-star
+Whip,Default,Rulebook Combat,0,0,user,-1,0,-1,-1,-1,https://tow.whfb.app/weapons-of-war/whip
+Lance,Default,Rulebook Combat,0,0,user,-1,+2,-2,-1,-1,https://tow.whfb.app/weapons-of-war/lance
+Cavalry Spear,Default,Rulebook Combat,0,0,user,-1,+1,-1,-1,-1,https://tow.whfb.app/weapons-of-war/cavalry-spear
+Throwing Spear,Default,Rulebook Combat,0,0,user,-1,0,-1,-1,-1,https://tow.whfb.app/weapons-of-war/throwing-spear
+Thrusting Spear,Default,Rulebook Combat,0,0,user,-1,0,-1,-1,-1,https://tow.whfb.app/weapons-of-war/thrusting-spear
+Longbow,Default,Rulebook Missile,0,30,weapon,3,0,-1,Armour Bane (1),-1,https://tow.whfb.app/weapons-of-war/longbow
+Shortbow,Default,Rulebook Missile,0,18,weapon,3,0,-1,-1,-1,https://tow.whfb.app/weapons-of-war/shortbow
+Warbow,Default,Rulebook Missile,0,24,user,-1,0,-1,-1,-1,https://tow.whfb.app/weapons-of-war/warbow
+Handgun,Default,Rulebook Missile,0,24,weapon,4,0,-1,Armour Bane (1),-1,https://tow.whfb.app/weapons-of-war/handgun
+Pistol,Default,Rulebook Missile,0,12,weapon,4,0,-1,Armour Bane (1),-1,https://tow.whfb.app/weapons-of-war/pistol
+Brace of Pistols,Ranged,Rulebook Missile,0,12,weapon,4,0,-1,Armour Bane (1),Multiple Shots (2); Quick Shot,https://tow.whfb.app/weapons-of-war/brace-of-pistols
+Brace of Pistols,Combat,Rulebook Missile,0,0,user,-1,0,-1,-1,-1,https://tow.whfb.app/weapons-of-war/brace-of-pistols
+Repeater Handgun,Default,Rulebook Missile,0,24,weapon,4,0,-1,Armour Bane (1),Multiple Shots (3),https://tow.whfb.app/weapons-of-war/repeater-handgun
+Repeater Pistol,Default,Rulebook Missile,0,12,weapon,4,0,-1,Armour Bane (1),Multiple Shots (3); Quick Shot,https://tow.whfb.app/weapons-of-war/repeater-pistol
+Crossbow,Default,Rulebook Missile,0,30,weapon,4,0,-1,-1,-1,https://tow.whfb.app/weapons-of-war/crossbow
+Repeater Crossbow,Default,Rulebook Missile,0,24,weapon,3,0,-1,-1,Multiple Shots (2),https://tow.whfb.app/weapons-of-war/repeater-crossbow
+Repeater Handbow,Default,Rulebook Missile,0,12,weapon,3,0,-1,-1,Multiple Shots (2); Quick Shot,https://tow.whfb.app/weapons-of-war/repeater-handbow
+Brace of Repeater Handbows,Default,Rulebook Missile,0,12,weapon,3,0,-1,-1,Multiple Shots (4); Quick Shot,https://tow.whfb.app/weapons-of-war/brace-of-repeater-handbows
+Throwing Weapons,Default,Rulebook Missile,0,9,user,-1,0,-1,-1,Quick Shot,https://tow.whfb.app/weapons-of-war/throwing-weapons
+Javelin,Default,Rulebook Missile,0,12,user,-1,0,-1,-1,Quick Shot,https://tow.whfb.app/weapons-of-war/javelin
+Sling,Default,Rulebook Missile,0,18,weapon,3,0,-1,-1,Multiple Shots (2),https://tow.whfb.app/weapons-of-war/sling
+Throwing Axe,Default,Rulebook Missile,0,9,user,-1,+1,-1,-1,Quick Shot,https://tow.whfb.app/weapons-of-war/throwing-axe
+Bolt Thrower,Default,Rulebook War Machine,0,48,weapon,6,0,-3,-1,Through & Through,https://tow.whfb.app/war-machines/bolt-throwers
+Repeater Bolt Thrower,Default,Rulebook War Machine,0,48,weapon,6,0,-3,-1,Through & Through; Rapid Fire,https://tow.whfb.app/war-machines/bolt-throwers
+Stone Thrower,Default,Rulebook War Machine,12,60,weapon,4(8),0,-1(-3),-1,Bombardment; Indirect Fire; Multiple Wounds (D3+1),https://tow.whfb.app/war-machines/stone-throwers
+Cannon,Default,Rulebook War Machine,0,48,weapon,8,0,-2,-1,Cannon Fire; Grapeshot,https://tow.whfb.app/war-machines/cannon
+Great Cannon,Default,Rulebook War Machine,0,60,weapon,10,0,-3,-1,Cannon Fire; Grapeshot,https://tow.whfb.app/war-machines/cannon
+Organ Gun,Default,Rulebook War Machine,0,30,weapon,5,0,-1,-1,Multi-Barrelled,https://tow.whfb.app/war-machines/organ-guns
+Mortar,Default,Rulebook War Machine,12,48,weapon,2(6),0,-2(-3),-1,Bombardment; Multiple Wounds (D3),https://tow.whfb.app/war-machines/mortars
+Fire Thrower,Default,Rulebook War Machine,0,12,weapon,5,0,-1,-1,Column of Fire,https://tow.whfb.app/war-machines/fire-throwers
+Dread Halberd,Default,Dark Elves,0,0,user,-1,+1,-1,Armour Bane (1),Fight in Extra Rank; Requires Two Hands,https://tow.whfb.app/weapons-of-war/dread-halberd
+Great Blade,Scything Blow,Grand Cathay,0,0,user,-1,0,-2,-1,-1,https://tow.whfb.app/weapons-of-war/great-blade
+Great Blade,Deadly Strike,Grand Cathay,0,0,user,-1,+1,-4,-1,-1,https://tow.whfb.app/weapons-of-war/great-blade
+Cathayan Lance,Default,Grand Cathay,0,0,user,-1,+1,-1,-1,-1,https://tow.whfb.app/weapons-of-war/cathayan-lance
+Polearm,Single-Handed,Kingdom of Bretonnia,0,0,user,-1,0,-1,-1,-1,https://tow.whfb.app/weapons-of-war/polearm
+Polearm,Double-Handed,Kingdom of Bretonnia,0,0,user,-1,+1,-1,-1,-1,https://tow.whfb.app/weapons-of-war/polearm
+Fireglaive,Ranged,Chaos Dwarfs,0,18,weapon,4,0,-1,Armour Bane (1),-1,https://tow.whfb.app/weapons-of-war/fireglaive
+Fireglaive,Combat,Chaos Dwarfs,0,0,user,-1,+1,-1,-1,-1,https://tow.whfb.app/weapons-of-war/fireglaive
+Brace of Drakefire Pistols,Ranged,Dwarfen Mountain Holds,0,12,weapon,5,0,-1,Armour Bane (2),Dwarf Crafted; Flaming Attacks; Multiple Shots (2); Quick Shot,https://tow.whfb.app/weapons-of-war/brace-of-drakefire-pistols
+Brace of Drakefire Pistols,Combat,Dwarfen Mountain Holds,0,0,user,-1,0,-1,-1,-1,https://tow.whfb.app/weapons-of-war/brace-of-drakefire-pistols
+Brace of Ogre Pistols,Ranged,Ogre Kingdoms,0,24,weapon,4,0,-1,Armour Bane (1),Multiple Shots (2); Quick Shot,https://tow.whfb.app/weapons-of-war/brace-of-ogre-pistols
+Brace of Ogre Pistols,Combat,Ogre Kingdoms,0,0,user,-1,0,-1,-1,-1,https://tow.whfb.app/weapons-of-war/brace-of-ogre-pistols
+Long Rifle,Default,Empire of Man,0,36,weapon,4,0,-1,Armour Bane (1),Cumbersome,https://tow.whfb.app/weapons-of-war/long-rifle
+Grenade Launching Blunderbuss,Default,Empire of Man,0,24,weapon,4,0,-2,-1,Cumbersome; Ponderous,https://tow.whfb.app/weapons-of-war/grenade-launching-blunderbuss
+Helblaster Volley Gun,Default,Empire of Man,0,24,weapon,5,0,-1,Armour Bane (2),Cumbersome; Helblaster; Move or Shoot,https://tow.whfb.app/weapons-of-war/helblaster-volley-gun
+Helstorm Rocket Battery,Default,Empire of Man,12,48,weapon,3,0,-1,-1,Cumbersome; Helstorm; Move or Shoot,https://tow.whfb.app/weapons-of-war/helstorm-rocket-battery
+Steam Cannon,Default,Empire of Man,0,24,weapon,8,0,-2,Armour Bane (2),Cannon Fire; Cumbersome; Multiple Wounds (D3),https://tow.whfb.app/weapons-of-war/steam-cannon
+Eagle-eye Bolt Thrower,Default,High Elf Realms,0,24,weapon,5,0,-3,-1,Cumbersome; Multiple Wounds (D3),https://tow.whfb.app/weapons-of-war/eagle-eye-bolt-thrower
+Giant Blowpipes,Default,Lizardmen,0,18,weapon,3,0,-1,-1,Cumbersome; Multiple Shots (2D6); Poisoned Attacks,https://tow.whfb.app/weapons-of-war/giant-blowpipes
+Gunpowder Bombs,Default,Grand Cathay,0,9,weapon,3,0,-1,Armour Bane (1),Move & Shoot; Quick Shot,https://tow.whfb.app/weapons-of-war/gunpowder-bombs
+Ironfist,Default,Ogre Kingdoms,0,0,user,-1,0,-1,-1,-1,https://tow.whfb.app/weapons-of-war/ironfist
+Scraplauncher Catapult,Default,Ogre Kingdoms,12,48,weapon,3(4),0,-(-2),-1,Bombardment; Cumbersome; Multiple Wounds (2),https://tow.whfb.app/weapons-of-war/scraplauncher-catapult
+Warplock Musket,Default,Skaven,0,24,weapon,5,0,-2,-1,-1,https://tow.whfb.app/weapons-of-war/warplock-musket
+Warpfire Thrower,Default,Skaven,0,6,weapon,4,0,-1,-1,Column of Fire; Cumbersome; Flaming Attacks,https://tow.whfb.app/weapons-of-war/warpfire-thrower
+Infernal Incendiaries,Default,Chaos Dwarfs,12,48,weapon,3(3),0,-(-),-1,Bombardment,https://tow.whfb.app/weapons-of-war/infernal-incendiaries
+Hurl Attack,Default,Beastmen Brayherds,12,36,weapon,4(8),0,-1(-3),-1,Bombardment; Multiple Wounds (D3+1),https://tow.whfb.app/weapons-of-war/hurl-attack
+Spidersilk Lobber,Default,Orc & Goblin Tribes,12,48,weapon,2(4),0,-(-1),-1,Bombardment,https://tow.whfb.app/weapons-of-war/spidersilk-lobber
+Warpfire Blast,Default,Warriors of Chaos,6,24,weapon,4(8),0,-1(-3),-1,Bombardment; Multiple Wounds (D3+1),https://tow.whfb.app/weapons-of-war/warpfire-blast
+Bilesword,Default,Daemons of Chaos,0,0,user,-1,0,-2,Armour Bane (1),Strike Last,https://tow.whfb.app/weapons-of-war/bilesword

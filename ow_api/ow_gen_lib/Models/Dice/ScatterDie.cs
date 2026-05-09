@@ -6,19 +6,19 @@ namespace ow_gen_lib.Models.Dice
 {
     public sealed class ScatterDie : Die
     {
-        private static readonly string[] _faces = Enum.GetNames<ScatterDieResult>();
+        private static readonly string[] _faces = Enum.GetNames<Dice_ScatterDieResult>();
 
-        private static readonly ScatterDieResult[] _results =
+        private static readonly Dice_ScatterDieResult[] _results =
         {
-            ScatterDieResult.Arrow,
-            ScatterDieResult.Arrow,
-            ScatterDieResult.Arrow,
-            ScatterDieResult.Arrow,
-            ScatterDieResult.Hit,
-            ScatterDieResult.Hit
+            Dice_ScatterDieResult.Arrow,
+            Dice_ScatterDieResult.Arrow,
+            Dice_ScatterDieResult.Arrow,
+            Dice_ScatterDieResult.Arrow,
+            Dice_ScatterDieResult.Hit,
+            Dice_ScatterDieResult.Hit
         };
 
-        public ScatterDie() : base(DiceType.DS)
+        public ScatterDie() : base(Dice_DiceType.DS)
         {
         }
 

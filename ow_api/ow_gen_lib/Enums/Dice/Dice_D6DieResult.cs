@@ -1,6 +1,6 @@
 namespace ow_gen_lib.Enums.Dice
 {
-    public enum D6DieResult
+    public enum Dice_D6DieResult
     {
         One = 1,
         Two = 2,

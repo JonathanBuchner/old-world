@@ -133,11 +133,24 @@ With a few exceptions, all models used in a game of Warhammer: the Old World sho
 - 100by100
 - 100by150
 
+#### Classification
+Classification should be an enum with the entries:
+- Character
+- Core
+- Special
+- Rare
+
+ClassificationSub
+- General
+- BSB
+- Champion
+- Banner
+- Musician
+
 #### Characteristics Profile
 Models may have two or more rows on their characteristics profile, often with gaps in each (shown as a dash ' - '). Each row represents a different model, combined together into a single profile. For example, one row might represent a rider, the next their mount.
 
 #### Profile Attributes
-
 - Movement (M)
 - Weapon Skill (WS)
 - Ballistic Skill (BS)
@@ -150,19 +163,18 @@ Models may have two or more rows on their characteristics profile, often with ga
 
 #### Other Model information:
 - Base Points Value (int)
-- Troop Type
-- Base Size
-- Equipment
-- Magic
-- Options
+- Troop Type (troop type enum)
+- Troop Subtype (sub troop type)
+- Classification (corresponding enum)
+- ClassificationSub (corresponind enum)
+- Base Size (see the enum)
+- Equipment (List of equipment)
+- Spells(List of Spells)
 - Special Rules
-- Magic Items
-- Unique
 
 #### Calculated model information
 A model also has:
     Total Point Value (which includes the cost of all 
-
 
 
 #### Model Notes
@@ -195,3 +207,36 @@ When making a Leadership test a natural roll of 12 (i.e., rolling a double 6) is
 
 #### Notes:
 When making a characteristic test a natural roll of 6 is always a failure, and a natural 1 is always a success, regardless of any other modifiers. Additionally, if the model has a characteristic of 0 or ' - ' it automatically fails the test.
+
+
+### Spells
+
+There are 7 different type of spells (this should be an enum):
+
+SpellTypes:
+- Enchantment
+- Hex
+- Conveyance
+- Magic Missiles
+- Magical Vortex
+- Assailment
+- Self
+
+There are many different lores of magic.  Currently: (this should be an enum)
+
+SpellLores ()
+- Battle
+- Daemonology
+- Dark
+- Elementalism
+- High
+- Illusion
+- Necromancy
+- Waaag
+
+#### Spell profile
+A spell profile should be an abstract class with have the fields:
+- Type (enum)
+- Lore (enum)
+- Cost (int)
+- Range (int)
