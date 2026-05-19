@@ -9,6 +9,9 @@ namespace ow_gen_lib.Enums.EntityType
         Equipment,
         Rules,
         Spell,
-        ModelProfile
+        ModelProfile,
+        Model,
+        Unit,
+        AdditionalModel,
     }
 }

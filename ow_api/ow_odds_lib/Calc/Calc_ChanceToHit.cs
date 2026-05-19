@@ -16,9 +16,9 @@ namespace ow_odds_lib.Calc
         public class ChanceToHitParams
         {
             public int AttWs { get; set; }
-            public RuleList AttR { get; set; } = new RuleList();
+            public RuleList AttRules { get; set; } = new RuleList();
             public int DefWs { get; set; }
-            public RuleList DefR { get; set; } = new RuleList();
+            public RuleList DefRules { get; set; } = new RuleList();
         }
 
         public static RollStat ChanceToHit(int AttackerWs, RuleList AttackerRules, int DefenderWs, RuleList DefenderRules)
@@ -26,9 +26,9 @@ namespace ow_odds_lib.Calc
             var p = new ChanceToHitParams()
             {
                 AttWs = AttackerWs,
-                AttR = AttackerRules,
+                AttRules = AttackerRules,
                 DefWs = DefenderWs,
-                DefR = DefenderRules
+                DefRules = DefenderRules
             };
 
             // Obviously this order matters
@@ -44,19 +44,19 @@ namespace ow_odds_lib.Calc
         private static void AddWeaponSkillAdjustments(ChanceToHitParams p)
         {
             // Change attacker WS
-            var AddToAtt = p.AttR.CountRelaventRules(
+            var AddToAtt = p.AttRules.CountRelaventRules(
                     RuleName.Add1Attr
                 );
-            var SubToAtt = p.AttR.CountRelaventRules(
+            var SubToAtt = p.AttRules.CountRelaventRules(
                     RuleName.Subtract1Attr
                 );
             p.AttWs += AddToAtt - SubToAtt;
 
             // Change defender WS
-            var AddToDef = p.DefR.CountRelaventRules(
+            var AddToDef = p.DefRules.CountRelaventRules(
                     RuleName.Add1Attr
                 );
-            var SubToDef= p.DefR.CountRelaventRules(
+            var SubToDef= p.DefRules.CountRelaventRules(
                     RuleName.Subtract1Attr
                 );
             p.DefWs += AddToDef - SubToDef;
@@ -68,10 +68,10 @@ namespace ow_odds_lib.Calc
 
         private static void AddToHitAdjustments(RollStat r, ChanceToHitParams p)
         {
-            var AddToAtt = p.AttR.CountRelaventRules(
+            var AddToAtt = p.AttRules.CountRelaventRules(
                     RuleName.Add1Result
                 );
-            var SubToAtt = p.DefR.CountRelaventRules(
+            var SubToAtt = p.DefRules.CountRelaventRules(
                     RuleName.Subtract1Result
                 );
 
@@ -81,21 +81,21 @@ namespace ow_odds_lib.Calc
 
             // 1 Always miss. 6's always hit.
             // Will account for special sixes
-            Utils.Bound(r, 1, 5);
+            Utils.BoundNumerator(r, 1, 5);
         }
 
         private static void OverrideToHit(RollStat r, ChanceToHitParams p)
         {
-            var alwaysHitOn2 = p.AttR.CountRelaventRules(
+            var alwaysHitOn2 = p.AttRules.CountRelaventRules(
                     RuleName.AlwaysHitOn2
                 );
-            var alwaysHitOn3 = p.AttR.CountRelaventRules(
+            var alwaysHitOn3 = p.AttRules.CountRelaventRules(
                     RuleName.AlwaysHitOn3
                 );
-            var alwaysHitOn4 = p.AttR.CountRelaventRules(
+            var alwaysHitOn4 = p.AttRules.CountRelaventRules(
                     RuleName.AlwaysHitOn4
                 );
-            var alwaysHitOn5 = p.AttR.CountRelaventRules(
+            var alwaysHitOn5 = p.AttRules.CountRelaventRules(
                     RuleName.AlwaysHitOn5
                 );
 
@@ -168,7 +168,7 @@ namespace ow_odds_lib.Calc
 
         private static void AddSpecial6Rules(RollStat r, ChanceToHitParams p)
         {
-            r.UniqueSixEffect = p.AttR.FindRelaventRules(
+            r.UniqueSixEffect = p.AttRules.FindRelaventRules(
                     RuleName.Poison
                 );
 
@@ -179,7 +179,7 @@ namespace ow_odds_lib.Calc
 
         private static bool CheckFor_RerollSuccessesToHit(ChanceToHitParams p)
         {
-            var count = p.DefR.CountRelaventRules(
+            var count = p.DefRules.CountRelaventRules(
                    RuleName.RerollSuccesses
                 );
 
@@ -188,7 +188,7 @@ namespace ow_odds_lib.Calc
 
         private static bool CheckFor_RerollFailuresToHit(ChanceToHitParams p)
         {
-            var count = p.AttR.CountRelaventRules(
+            var count = p.AttRules.CountRelaventRules(
                   RuleName.RerollMisses,
                   RuleName.Hatred
                );
@@ -198,7 +198,7 @@ namespace ow_odds_lib.Calc
 
         private static bool CheckFor_Reroll6ToHit(ChanceToHitParams p)
         {
-            var count = p.DefR.CountRelaventRules(
+            var count = p.DefRules.CountRelaventRules(
                    RuleName.Reroll6
                 );
 
@@ -207,7 +207,7 @@ namespace ow_odds_lib.Calc
 
         private static bool CheckFor_Reroll1ToHit(ChanceToHitParams p)
         {
-            var count = p.AttR.CountRelaventRules(
+            var count = p.AttRules.CountRelaventRules(
                    RuleName.Reroll1,
                    RuleName.PrimalFury,
                    RuleName.GrudgeRune,

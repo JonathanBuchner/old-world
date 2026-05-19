@@ -36,6 +36,11 @@ namespace ow_gen_lib.Enums.SpecialRules
         AlwaysWoundOn3,
         AlwaysWoundOn4,
         AlwaysWoundOn5,
+        AlwaysArmorSaveOn2,
+        AlwaysArmorSaveOn3,
+        AlwaysArmorSaveOn4,
+        AlwaysArmorSaveOn5,
+        AlwaysArmorSaveOn6,
 
         #endregion
 

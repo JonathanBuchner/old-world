@@ -11,18 +11,10 @@ public class Program
 
         var builder = WebApplication.CreateBuilder(args);
 
-        Settings.AddConfiguration(builder);
-
-        // ServicesRegisterer.All();
-
-
-
-        // Add services to the container.
-
+        ConfigurationRegisterer.AddConfiguration(builder);
+        ServicesRegisterer.All(builder);
+        
         builder.Services.AddControllers();
-        // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-        // builder.Services.AddOpenApi();
-
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -32,11 +24,8 @@ public class Program
         }
 
         app.UseHttpsRedirection();
-
         app.UseAuthorization();
-
         app.MapControllers();
-
         app.Run();
     }
 }

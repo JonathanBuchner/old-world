@@ -3,15 +3,11 @@ namespace ow_gen_lib.Models
 {
     public class RollStat
     {
-        public Fraction RegHits { get; set; }
-        public Fraction UniqueSix { get; set; }
-        public List<Enums.SpecialRules.RuleName> UniqueSixEffect;
-        public RollStat()
-        {
-            RegHits = new Fraction(0, 1);
-            UniqueSix = new Fraction(0, 1);
-            UniqueSixEffect = [];
-        }
+        public Fraction RegHits { get; set; } = new Fraction(0, 1);
+        public Fraction UniqueSix { get; set; } = new Fraction(0, 1);
+        public Fraction UniqueFive { get; set; } = new Fraction(0, 1);
+        public List<Enums.SpecialRules.RuleName> UniqueSixEffect = [];
+        public List<Enums.SpecialRules.RuleName> UniqueFiveEffect = [];
 
         public void Reduce()
         {

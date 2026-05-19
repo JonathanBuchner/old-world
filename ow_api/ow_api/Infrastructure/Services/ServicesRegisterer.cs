@@ -1,79 +1,42 @@
-﻿using Microsoft.ApplicationInsights.AspNetCore.Extensions;
-using Microsoft.ApplicationInsights.Channel;
-
+using Azure.Monitor.OpenTelemetry.AspNetCore;
 using ow_api.Infrastructure.Telemetry;
+using OwTelemetry = ow_api.Infrastructure.Telemetry.Telemetry;
 
 namespace ow_api.Infrastructure.Services
 {
-    /// <summary>
-    /// Registers services for program
-    /// </summary>
     public static class ServicesRegisterer
     {
-        ///// <summar
-        ///// Registers all services, including in this order:
-        ///// <para>-Application Insights</para>
-        ///// </summary>
-        //public static void All(WebApplicationBuilder builder)
-        //{
+        public static void All(WebApplicationBuilder builder)
+        {
+            AddOpenTelemetry(builder);
+            AddTelemetryTracker(builder);
+        }
 
-        //}
+        private static void AddTelemetryTracker(WebApplicationBuilder builder)
+        {
+            builder.Services.AddSingleton<ITelemetryTracker, TelemetryTracker>();
+        }
 
-        //private static void AddApplicationInsights(WebApplicationBuilder builder)
-        //{
-        //    var settings = builder.Configuration.GetSection(key:"ApplicationInsightSettings").Get<ApplicationInsightsSettings>();
+        private static void AddOpenTelemetry(WebApplicationBuilder builder)
+        {
+            var settings = builder.Configuration.GetSection(nameof(ApplicationInsightsSettings)).Get<ApplicationInsightsSettings>();
 
-        //    if (settings == null)
-        //        throw new ArgumentNullException($"ApplicationInsightSettings has not been set");
+            if (settings == null)
+                throw new ArgumentNullException($"{nameof(ApplicationInsightsSettings)} has not been set");
 
-        //    var options = new ApplicationInsightsServiceOptions()
-        //    {
-        //        AddAutoCollectedMetricExtractor = settings.AddAutoCollectedMetricExtractor,
-        //        ConnectionString = settings.ConnectionString,
-        //        EnableDependencyTrackingTelemetryModule = settings.EnableDependencyTrackingTelemetryModule,
-        //        EnablePerformanceCounterCollectionModule = settings.EnablePerformanceCounterCollectionModule,
-        //        EnableRequestTrackingTelemetryModule = settings.EnableRequestTrackingTelemetryModule,
-        //    };
+            builder.Logging.ClearProviders();
 
-        //    builder.Services.AddApplicationInsightsTelemetry(options);
+            builder.Services
+                .AddOpenTelemetry()
+                .WithTracing(tracing => tracing.AddSource(OwTelemetry.ServiceName))
+                .WithMetrics(metrics => metrics.AddMeter(OwTelemetry.ServiceName))
+                .UseAzureMonitor(options =>
+                {
+                    options.ConnectionString = settings.ConnectionString;
+                });
 
-        //    // Register custom TelemetryInitializer to provide role name when running locally
-        //    builder.Services.AddSingleton<ITelemetryInitializer, DevelopmentRoleNameTelemetryInitializer>();
-
-        //    builder.Services.ConfigureTelemetryModule<QuickPulseTelemetryModule>((module, _) =>
-        //    {
-        //        module.AuthenticationApiKey = settings.ApiKey;
-        //    });
-        //}
-
-        ///// <summary>
-        ///// Custom telemetry initializer to set role name when running locally
-        ///// </summary>
-        //public class DevelopmentRoleNameTelemetryInitializer : ITelemetryInitializer
-        //{
-        //    /// <summary>
-        //    /// The web host environment
-        //    /// </summary>
-        //    private readonly IWebHostEnvironment _env;
-
-        //    public DevelopmentRoleNameTelemetryInitializer(IWebHostEnvironment env)
-        //    {
-        //        _env = env;
-        //    }
-
-        //    /// <summary>
-        //    /// Initializes the telemetry.
-        //    /// </summary>
-        //    /// <param name="telemetry">The telemetry to initialize.</param>
-        //    public void Initialize(ITelemetry telemetry)
-        //    {
-        //        if (_env.IsDevelopment())
-        //        {
-        //            // Set the role name to the machine name if running in development environment
-        //            telemetry.Context.Cloud.RoleName = Environment.MachineName;
-        //        }
-        //    }
-        //}
-
+            if (builder.Environment.IsDevelopment())
+                builder.Logging.AddConsole();
+        }
     }
 }

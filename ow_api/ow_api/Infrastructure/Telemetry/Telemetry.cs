@@ -1,64 +1,45 @@
-﻿using Microsoft.ApplicationInsights;
+using System.Diagnostics;
+using System.Diagnostics.Metrics;
 
 namespace ow_api.Infrastructure.Telemetry
 {
-    public class Telemetry : ITelemetry
+    public static class Telemetry
     {
-        /// <summary>
-        /// Telemetry client instance for logging.
-        /// </summary>
-        private readonly TelemetryClient _telemetryClient;
+        public const string ServiceName = "ow_api";
+        public static readonly ActivitySource ActivitySource = new(ServiceName);
+        public static readonly Meter Meter = new(ServiceName);
+        public static readonly Counter<long> EventsLogged = Meter.CreateCounter<long>("ow_api.events.logged");
+        public static readonly Counter<long> ErrorsLogged = Meter.CreateCounter<long>("ow_api.errors.logged");
 
-        /// <summary>
-        /// Logger instance for logging.
-        /// </summary>
-        private readonly ILogger<TelemetryClient> _logger;
-
-        public Telemetry(TelemetryClient telemetryClient, ILogger<TelemetryClient> logger)
+        public static Activity? StartActivity(string name)
         {
-            _telemetryClient = telemetryClient;
-            _logger = logger;
+            return ActivitySource.StartActivity(name);
         }
 
-        /// <summary>
-        /// Logs an information message.
-        /// </summary>
-        /// <param name="message">message</param>
-        public void LogInformation(string message)
+        public static void TrackEvent(string eventName, Dictionary<string, object?>? dimensions = null)
         {
-            _telemetryClient.TrackTrace(message);
-            _logger.LogInformation(message);
+            EventsLogged.Add(1, BuildTags("event.name", eventName, dimensions));
         }
 
-        /// <summary>
-        /// Logs a success message.
-        /// </summary>
-        /// <param name="message">message</param>
-        public void LogSuccess(string message)
+        public static void TrackError(string errorName, Dictionary<string, object?>? dimensions = null)
         {
-            _telemetryClient.TrackEvent("Success", new Dictionary<string, string> { { "Message", message } });
-            _logger.LogInformation(message);
+            ErrorsLogged.Add(1, BuildTags("error.name", errorName, dimensions));
         }
 
-        /// <summary>
-        /// Logs a warning message.
-        /// </summary>
-        /// <param name="message">message</param>
-        public void LogWarning(string message)
+        private static KeyValuePair<string, object?>[] BuildTags(string nameKey, string nameValue, Dictionary<string, object?>? dimensions)
         {
-            _telemetryClient.TrackTrace(message, Microsoft.ApplicationInsights.DataContracts.SeverityLevel.Warning);
-            _logger.LogWarning(message);
-        }
+            var tags = new List<KeyValuePair<string, object?>>
+            {
+                new KeyValuePair<string, object?>(nameKey, nameValue)
+            };
 
-        /// <summary>
-        /// Logs a warning message with additional data.
-        /// </summary>
-        /// <param name="message">message</param>
-        /// <param name="exception">exception</param>
-        public void LogError(string message, Exception exception)
-        {
-            _telemetryClient.TrackException(exception, new Dictionary<string, string> { { "Message", message } });
-            _logger.LogError(exception, message);
+            if (dimensions != null)
+            {
+                foreach (var dimension in dimensions)
+                    tags.Add(new KeyValuePair<string, object?>(dimension.Key, dimension.Value));
+            }
+
+            return tags.ToArray();
         }
     }
 }

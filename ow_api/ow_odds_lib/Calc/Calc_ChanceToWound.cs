@@ -73,7 +73,7 @@ namespace ow_odds_lib.Calc
 
             r.RegHits.Numerator += addToAtt - subToAtt;
 
-            Utils.Bound(r, 1, 5);
+            Utils.BoundNumerator(r, 1, 5);
         }
 
         private static void OverrideToWound(RollStat r, ChanceToWoundParams p)
@@ -143,7 +143,7 @@ namespace ow_odds_lib.Calc
         {
             var numerator = 3 + p.AttS - p.DefT;
             var roll = new Fraction(numerator, 6);
-            Utils.Bound(roll, 1, 5);
+            Utils.BoundNumerator(roll, 1, 5);
 
             return roll;
         }

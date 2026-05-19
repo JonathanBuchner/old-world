@@ -8,10 +8,9 @@ namespace ow_gen_lib.Models
 
         public BigInteger Denominator { get; set; }
 
-        public Fraction(int numerator, int denominator)
-            : this(new BigInteger(numerator), new BigInteger(denominator))
-        {
-        }
+        public Fraction() : this(0, 1) { }
+
+        public Fraction(int numerator, int denominator) : this(new BigInteger(numerator), new BigInteger(denominator)) { }
 
         public Fraction(BigInteger numerator, BigInteger denominator)
         {

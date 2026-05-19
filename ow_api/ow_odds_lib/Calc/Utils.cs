@@ -22,7 +22,7 @@ namespace ow_odds_lib.Calc
             return s;
         }
 
-        public static void Bound(Fraction f, int floor, int ceil)
+        public static void BoundNumerator(Fraction f, int floor, int ceil)
         {
             if (f.Numerator < floor)
                 f.Numerator = floor;
@@ -31,7 +31,7 @@ namespace ow_odds_lib.Calc
                 f.Numerator = ceil;
         }
 
-        public static void Bound(RollStat r, int floor, int ceil)
+        public static void BoundNumerator(RollStat r, int floor, int ceil)
         {
             var total_hit = r.RegHits.Numerator + r.UniqueSix.Numerator;
 
