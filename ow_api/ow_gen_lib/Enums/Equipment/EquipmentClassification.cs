@@ -6,8 +6,9 @@ namespace ow_gen_lib.Enums.Equipment
 {
     public enum EquipmentClassification
     {
+        None,
         Mundane,
-        MagicUnique,
+        Magic,
         MagicCommon,
         Unique,
     }

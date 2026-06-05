@@ -33,6 +33,12 @@ namespace ow_api.Infrastructure.Settings
                 .AddOptions<ApplicationInsightsSettings>()
                 .Bind(builder.Configuration.GetSection(nameof(ApplicationInsightsSettings)))
                 .ValidateDataAnnotations();
+
+            builder.Services
+                .AddOptions<AzureStorageSettings>()
+                .Bind(builder.Configuration.GetSection(nameof(AzureStorageSettings)))
+                .ValidateDataAnnotations()
+                .ValidateOnStart();
         }
     }
 }

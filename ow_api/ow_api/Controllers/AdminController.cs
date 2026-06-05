@@ -6,7 +6,7 @@ namespace ow_api.Controllers
     [Route("admin")]
     public class AdminController : BaseController<AdminController>
     {
-        public AdminController(ILogger<AdminController> logger, ITelemetryTracker telemetryTracker) : base(logger, telemetryTracker)
+        public AdminController(ILogger<AdminController> logger, IControllerTelemetry controllerTelemetry) : base(logger, controllerTelemetry)
         {
         }
 
@@ -14,12 +14,7 @@ namespace ow_api.Controllers
         public ActionResult<string> Ping()
         {
             Logger.LogInformation("Admin ping requested");
-            TelemetryTracker.TrackEvent("admin.ping.requested", new Dictionary<string, object?>
-            {
-                ["controller"] = nameof(AdminController),
-                ["action"] = nameof(Ping),
-                ["route"] = "admin/ping"
-            });
+            TrackEvent("admin.ping.requested", nameof(Ping));
 
             return Ok("pong");
         }

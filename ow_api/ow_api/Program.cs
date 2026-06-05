@@ -1,6 +1,7 @@
 
 using ow_api.Infrastructure.Services;
 using ow_api.Infrastructure.Settings;
+using ow_api.Infrastructure.Middleware;
 
 namespace ow_api;
 
@@ -23,6 +24,7 @@ public class Program
             // app.MapOpenApi();
         }
 
+        app.UseMiddleware<ExceptionTrackingMiddleware>();
         app.UseHttpsRedirection();
         app.UseAuthorization();
         app.MapControllers();

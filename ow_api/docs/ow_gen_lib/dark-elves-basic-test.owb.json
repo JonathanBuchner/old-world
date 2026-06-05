@@ -1,0 +1,504 @@
+{
+    "name": "Dark Elves Test",
+    "description": "Dark Elves Test",
+    "game": "the-old-world",
+    "points": 2000,
+    "army": "dark-elves",
+    "characters": [
+        {
+            "name_en": "Dark Elf Master",
+            "name_cn": "奴主",
+            "name_de": "Dark Elf Master",
+            "name_es": "Noble oscuro",
+            "name_fr": "Maître Elfe Noir",
+            "id": "dark-elf-master.rvoqkdn",
+            "points": 70,
+            "command": [
+                {
+                    "name_en": "General",
+                    "name_cn": "主将",
+                    "name_de": "General",
+                    "name_es": "General",
+                    "name_fr": "Général",
+                    "points": 0,
+                    "id": 0
+                },
+                {
+                    "name_en": "Battle Standard Bearer",
+                    "name_cn": "战旗手",
+                    "name_de": "Battle Standard Bearer",
+                    "name_es": "Portaestandarte de batalla",
+                    "name_fr": "Porteur de la Grande Bannière",
+                    "points": 25,
+                    "magic": {
+                        "types": [
+                            "banner"
+                        ],
+                        "maxPoints": 0
+                    },
+                    "id": 1,
+                    "active": true
+                }
+            ],
+            "equipment": [
+                {
+                    "name_en": "Hand weapon",
+                    "name_cn": "单手武器",
+                    "name_de": "Hand weapon",
+                    "name_es": "Arma de mano",
+                    "name_fr": "Arme de base",
+                    "points": 0,
+                    "perModel": true,
+                    "active": false,
+                    "id": 0
+                },
+                {
+                    "name_en": "Additional hand weapon",
+                    "name_cn": "额外单手武器",
+                    "name_de": "Additional hand weapon",
+                    "name_es": "Arma de mano adicional",
+                    "name_fr": "Arme de base additionnelle",
+                    "points": 3,
+                    "perModel": true,
+                    "id": 1,
+                    "active": false
+                },
+                {
+                    "name_en": "Great weapon",
+                    "name_cn": "重型武器",
+                    "name_de": "Great weapon",
+                    "name_es": "Arma a dos manos",
+                    "name_fr": "Arme lourde",
+                    "points": 4,
+                    "perModel": true,
+                    "id": 2,
+                    "active": false
+                },
+                {
+                    "name_en": "Halberd",
+                    "name_cn": "长戟",
+                    "name_de": "Halberd",
+                    "name_es": "Alabarda",
+                    "name_fr": "Hallebarde",
+                    "points": 3,
+                    "perModel": true,
+                    "id": 3,
+                    "active": false
+                },
+                {
+                    "name_en": "Lance",
+                    "name_cn": "长枪",
+                    "name_de": "Lance",
+                    "name_es": "Lanza de caballería",
+                    "name_fr": "Lance de joute",
+                    "points": 4,
+                    "perModel": true,
+                    "id": 4,
+                    "active": true
+                }
+            ],
+            "armor": [
+                {
+                    "name_en": "Light armour",
+                    "name_cn": "轻甲",
+                    "name_de": "Light armour",
+                    "name_es": "Armadura ligera",
+                    "name_fr": "Armure légère",
+                    "points": 0,
+                    "perModel": true,
+                    "active": false,
+                    "activeDefault": false,
+                    "id": 0
+                },
+                {
+                    "name_en": "Heavy armour",
+                    "name_cn": "重甲",
+                    "name_de": "Heavy armour",
+                    "name_es": "Armadura pesada",
+                    "name_fr": "Armure lourde",
+                    "points": 3,
+                    "perModel": true,
+                    "id": 1,
+                    "active": false
+                },
+                {
+                    "name_en": "Full plate armour",
+                    "name_cn": "全身甲",
+                    "name_de": "Full plate armour",
+                    "name_es": "Armadura completa",
+                    "name_fr": "Armure de plate complète",
+                    "points": 6,
+                    "perModel": true,
+                    "id": 2,
+                    "active": true
+                }
+            ],
+            "options": [
+                {
+                    "name_en": "Shield",
+                    "name_cn": "盾牌",
+                    "name_de": "Shield",
+                    "name_es": "Escudo",
+                    "name_fr": "Bouclier",
+                    "points": 2,
+                    "perModel": true,
+                    "minimum": 0,
+                    "maximum": 0,
+                    "id": 0,
+                    "active": true
+                },
+                {
+                    "name_en": "Repeater crossbow",
+                    "name_cn": "连发弩",
+                    "name_de": "Repeater crossbow",
+                    "name_es": "Ballesta de repetición",
+                    "name_fr": "Arbalète à répétition",
+                    "points": 6,
+                    "perModel": true,
+                    "minimum": 0,
+                    "maximum": 0,
+                    "id": 1,
+                    "active": true
+                },
+                {
+                    "name_en": "Repeater handbow",
+                    "name_cn": "连发手弩",
+                    "name_de": "Repeater handbow",
+                    "name_es": "Pistola ballesta",
+                    "name_fr": "Arbalète de poing à répétition",
+                    "points": 5,
+                    "perModel": true,
+                    "minimum": 0,
+                    "maximum": 0,
+                    "id": 2,
+                    "active": true
+                },
+                {
+                    "name_en": "Brace of Repeater handbows",
+                    "name_cn": "成对连发手弩",
+                    "name_de": "Brace of Repeater handbows",
+                    "name_es": "Ristra de pistolas ballesta",
+                    "name_fr": "Paire d’arbalètes à répétition de poing",
+                    "points": 10,
+                    "perModel": true,
+                    "minimum": 0,
+                    "maximum": 0,
+                    "id": 3,
+                    "active": true
+                },
+                {
+                    "name_en": "Sea Dragon Cloak",
+                    "name_cn": "海龙披风",
+                    "name_de": "Sea Dragon Cloak",
+                    "name_es": "Capa de dragón marino",
+                    "name_fr": "Cape en peau de Dragon des Mers",
+                    "points": 4,
+                    "perModel": true,
+                    "minimum": 0,
+                    "maximum": 0,
+                    "id": 4,
+                    "active": true
+                }
+            ],
+            "mounts": [
+                {
+                    "name_en": "On foot",
+                    "name_cn": "步行",
+                    "name_de": "On foot",
+                    "name_es": "A pie",
+                    "name_fr": "À Pied",
+                    "points": 0,
+                    "active": false,
+                    "id": 0
+                },
+                {
+                    "name_en": "Dark Steed",
+                    "name_cn": "黑暗骏马",
+                    "name_de": "Dark Steed",
+                    "name_es": "Corcel oscuro",
+                    "name_fr": "Coursier Noir",
+                    "points": 14,
+                    "id": 1,
+                    "active": false
+                },
+                {
+                    "name_en": "Cold One {dark elves}",
+                    "name_cn": "冷蜥",
+                    "name_de": "Cold One",
+                    "name_es": "Gélido",
+                    "name_fr": "Sang-froid",
+                    "points": 18,
+                    "id": 2,
+                    "active": true
+                },
+                {
+                    "name_en": "Dark Pegasus",
+                    "name_cn": "黑暗天马",
+                    "name_de": "Dark Pegasus",
+                    "name_es": "Pegaso negro",
+                    "name_fr": "Pégase Noir",
+                    "points": 35,
+                    "armyComposition": "de-renegade",
+                    "id": 3,
+                    "active": false
+                },
+                {
+                    "name_en": "Cold One Chariot",
+                    "name_cn": "冷蜥战车",
+                    "name_de": "Cold One Chariot",
+                    "name_es": "Carro de gélidos",
+                    "name_fr": "Char à Sang-froid",
+                    "points": 125,
+                    "id": 4,
+                    "active": false
+                }
+            ],
+            "items": [
+                {
+                    "name_en": "Magic Items",
+                    "name_cn": "魔法物品",
+                    "name_de": "Magische Gegenstände",
+                    "name_es": "Objetos mágicos",
+                    "name_fr": "Objets Magiques",
+                    "types": [
+                        "weapon",
+                        "armor",
+                        "talisman",
+                        "enchanted-item"
+                    ],
+                    "selected": [
+                        {
+                            "name_de": "Perle der unendlichen Gleichgültigkeit",
+                            "name_en": "Pearl of Infinite Bleakness",
+                            "name_cn": "无尽黯淡珍珠",
+                            "name_fr": "Perle de l’Infinie Tristesse",
+                            "name_it": "Pearl of Infinite Bleakness",
+                            "points": 15,
+                            "type": "talisman",
+                            "onePerArmy": true,
+                            "name": "pearl of infinite bleakness",
+                            "id": 7
+                        },
+                        {
+                            "name_cn": "鲁莽药剂",
+                            "name_de": "Trank der Tollkühnheit*",
+                            "name_en": "Potion of Foolhardiness*",
+                            "name_fr": "Potion d’Impétuosité*",
+                            "name_it": "Pozione Della Temerarietà*",
+                            "name_pl": "Mikstura Pochopności*",
+                            "points": 5,
+                            "stackable": true,
+                            "type": "enchanted-item",
+                            "onePerArmy": false,
+                            "name": "potion of foolhardiness",
+                            "id": 54
+                        },
+                        {
+                            "name_cn": "幸运石*",
+                            "name_de": "Glückstein*",
+                            "name_en": "Luckstone*",
+                            "name_fr": "Pierre de Chance*",
+                            "name_it": "Pietra Della Fortuna*",
+                            "name_pl": "Szczęśliwy kamień*",
+                            "points": 15,
+                            "stackable": true,
+                            "type": "talisman",
+                            "onePerArmy": false,
+                            "name": "luckstone",
+                            "id": 34
+                        },
+                        {
+                            "name_cn": "刺叮之刃",
+                            "name_de": "Reißende Klinge",
+                            "name_en": "Biting Blade",
+                            "name_fr": "Lame de Morsure",
+                            "name_it": "Lama Lacerante",
+                            "name_pl": "Gryzące Ostrze",
+                            "points": 15,
+                            "type": "weapon",
+                            "onePerArmy": true,
+                            "name": "biting blade",
+                            "id": 14
+                        }
+                    ],
+                    "maxPoints": 50
+                }
+            ],
+            "lores": [],
+            "specialRules": {
+                "name_en": "Eternal Hatred, Hatred (High Elves)*, Murderous {renegade}, Strike First*",
+                "name_cn": "亘古长恨, 仇恨（高等精灵）*, 嗜血（叛变）, 先攻*",
+                "name_de": "Eternal Hatred, Hatred (High Elves)*, Murderous, Strike First*",
+                "name_es": "Odio eterno, Odio (Altos elfos)*, Destreza homicida, Siempre ataca primero*",
+                "name_fr": "Haine Éternelle, Haine (Hauts Elfes)*, Meurtriers, Frappe En Premier*"
+            },
+            "notes": {
+                "name_en": "",
+                "name_cn": "",
+                "name_de": "",
+                "name_es": "",
+                "name_fr": ""
+            },
+            "magic": {
+                "items": []
+            },
+            "generatedSpells": null
+        }
+    ],
+    "core": [],
+    "special": [
+        {
+            "name_en": "Cold One Knights",
+            "name_cn": "冷蜥骑士",
+            "name_de": "Cold One Knights",
+            "name_es": "Caballeros gélidos",
+            "name_fr": "Chevaliers sur Sang-froid",
+            "id": "cold-one-knights.zubtjuyc",
+            "points": 31,
+            "minimum": 5,
+            "maximum": 0,
+            "command": [
+                {
+                    "name_en": "Dread Knight (champion)",
+                    "name_cn": "恐惧骑士(冠军)",
+                    "name_de": "Dread Knight (champion)",
+                    "name_es": "Caballero siniestro (campeón)",
+                    "name_fr": "Chevalier d’Effroi (champion)",
+                    "points": 7,
+                    "magic": {
+                        "types": [
+                            "weapon",
+                            "armor",
+                            "talisman",
+                            "enchanted-item"
+                        ],
+                        "maxPoints": 50,
+                        "selected": [
+                            {
+                                "name_cn": "迅捷之剑",
+                                "name_de": "Geschwinde Klinge",
+                                "name_en": "Sword of Swiftness",
+                                "name_fr": "Épée de Vivacité",
+                                "name_it": "Spada della Rapidità",
+                                "name_pl": "Miecz Szybkości",
+                                "points": 25,
+                                "type": "weapon",
+                                "onePerArmy": true,
+                                "name": "sword of swiftness",
+                                "id": 11
+                            }
+                        ]
+                    },
+                    "id": 0,
+                    "active": true
+                },
+                {
+                    "name_en": "Standard bearer",
+                    "name_cn": "旗手",
+                    "name_de": "Standard bearer",
+                    "name_es": "Portaestandarte",
+                    "name_fr": "Porte-étendard",
+                    "points": 7,
+                    "magic": {
+                        "types": [
+                            "banner"
+                        ],
+                        "maxPoints": 50,
+                        "selected": [
+                            {
+                                "name_de": "Banner von Har Ganeth",
+                                "name_en": "Banner of Har Ganeth",
+                                "name_cn": "哈尔冈西之旗",
+                                "name_fr": "Bannière de Har Ganeth",
+                                "name_it": "Banner of Har Ganeth",
+                                "points": 25,
+                                "type": "banner",
+                                "onePerArmy": true,
+                                "name": "banner of har ganeth",
+                                "id": 10
+                            }
+                        ]
+                    },
+                    "id": 1,
+                    "active": true
+                },
+                {
+                    "name_en": "Musician",
+                    "name_cn": "乐手",
+                    "name_de": "Musician",
+                    "name_es": "Músico",
+                    "name_fr": "Musicien",
+                    "points": 7,
+                    "id": 2,
+                    "active": true
+                }
+            ],
+            "equipment": [
+                {
+                    "name_en": "Hand weapons, Lances, Shields",
+                    "name_cn": "单手武器, 长枪, 盾牌",
+                    "name_de": "Hand weapons, Lances, Shields",
+                    "name_es": "Armas de mano, Lanzas de caballería, Shields",
+                    "name_fr": "Armes de base, Lances de joute, Boucliers",
+                    "points": 0,
+                    "perModel": true,
+                    "active": true,
+                    "id": 0
+                }
+            ],
+            "armor": [
+                {
+                    "name_en": "Heavy armour",
+                    "name_cn": "重甲",
+                    "name_de": "Heavy armour",
+                    "name_es": "Armadura pesada",
+                    "name_fr": "Armure lourde",
+                    "points": 0,
+                    "perModel": true,
+                    "active": false,
+                    "activeDefault": false,
+                    "id": 0
+                },
+                {
+                    "name_en": "Full plate armour",
+                    "name_cn": "全身甲",
+                    "name_de": "Full plate armour",
+                    "name_es": "Armadura completa",
+                    "name_fr": "Armure de plate complète",
+                    "points": 4,
+                    "perModel": true,
+                    "id": 1,
+                    "active": true
+                }
+            ],
+            "options": [],
+            "mounts": [],
+            "items": [],
+            "lores": [],
+            "specialRules": {
+                "name_en": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Elven Reflexes, Fear, First Charge, Hatred (High Elves), Stupidity, Swiftstride",
+                "name_cn": "碎甲攻击(1 - Cold One only), 坚硬皮肤(1), 紧密阵型, 精灵反应, 恐惧, 先行冲锋, 仇恨(高等精灵), 愚笨, 快速行进",
+                "name_de": "Armour Bane (1 - Cold One only), Armoured Hide (1), Close Order, Elven Reflexes, Fear, First Charge, Hatred (High Elves), Stupidity, Swiftstride",
+                "name_es": "Penetración de armadura (1 - solo el gélido), Piel dura (1), Orden cerrado, Reflejos élficos, Miedo, Primera carga, Odio (Altos elfos), Estupidez, Rápido",
+                "name_fr": "Arme Perforante (1 - Sang-froid uniquement), Peau Blindée (1), Ordre Serré, Réflexes Elfiques, Peur, Première Charge, Haine (Hauts Elfes), Stupidité, Rapide"
+            },
+            "notes": {
+                "name_en": "0-1 per 1000 points",
+                "name_cn": "每1000分0-1",
+                "name_de": "0-1 per 1000 points",
+                "name_es": "0-1 por cada 1000 puntos",
+                "name_fr": "0-1 par tranche de 1000 points"
+            },
+            "strength": 5,
+            "magic": {
+                "items": []
+            }
+        }
+    ],
+    "rare": [],
+    "mercenaries": [],
+    "allies": [],
+    "id": "sfclfynkk",
+    "armyComposition": "de-renegade",
+    "compositionRule": "grand-melee-combined-arms"
+}
