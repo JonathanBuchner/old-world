@@ -1,9 +1,10 @@
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using ow_api.Infrastructure.Telemetry;
 
 namespace ow_api.Controllers
 {
-    [Route("admin")]
+    [ApiVersion(1.0)]
     public class AdminController : BaseController<AdminController>
     {
         public AdminController(ILogger<AdminController> logger, IControllerTelemetry controllerTelemetry) : base(logger, controllerTelemetry)

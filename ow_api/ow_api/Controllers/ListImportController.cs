@@ -1,4 +1,5 @@
 using System.Text.Json;
+using Asp.Versioning;
 using Microsoft.AspNetCore.Mvc;
 using ow_api.Application.ListImport;
 using ow_api.Application.ListImport.OldWorldBuilder;
@@ -10,6 +11,7 @@ using ow_api.Models.ListImport;
 
 namespace ow_api.Controllers
 {
+    [ApiVersion(1.0)]
     public class ListImportController : BaseController<ListImportController>
     {
         private readonly JsonListBuilderDetector _jsonListBuilderHelper;

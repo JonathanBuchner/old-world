@@ -1,6 +1,6 @@
 ﻿@ow_api_HostAddress = http://localhost:5038
 
-POST {{ow_api_HostAddress}}/api/listimport
+POST {{ow_api_HostAddress}}/api/v1/listimport
 Accept: application/json
 Content-Type: application/json
 
@@ -169,7 +169,7 @@ Content-Type: application/json
 
 ###
 
-POST {{ow_api_HostAddress}}/api/listimport
+POST {{ow_api_HostAddress}}/api/v1/listimport
 Accept: application/json
 Content-Type: application/json
 

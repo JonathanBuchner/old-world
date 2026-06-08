@@ -4,7 +4,7 @@ using ow_api.Infrastructure.Telemetry;
 namespace ow_api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public abstract class BaseController<TController> : ControllerBase
     {
         protected readonly ILogger<TController> Logger;

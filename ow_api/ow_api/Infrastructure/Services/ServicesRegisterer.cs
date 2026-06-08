@@ -1,3 +1,4 @@
+using Asp.Versioning;
 using Azure.Monitor.OpenTelemetry.AspNetCore;
 using Azure.Storage.Blobs;
 using ow_api.Application.ListImport;
@@ -15,6 +16,18 @@ namespace ow_api.Infrastructure.Services
             AddTelemetryTracker(builder);
             AddBlobStorage(builder);
             AddListImport(builder);
+            AddApiVersioning(builder);
+        }
+
+        private static void AddApiVersioning(WebApplicationBuilder builder)
+        {
+            builder.Services.AddApiVersioning(options =>
+            {
+                options.DefaultApiVersion = new ApiVersion(1, 0);
+                options.AssumeDefaultVersionWhenUnspecified = false;
+                options.ReportApiVersions = true;
+                options.ApiVersionReader = new UrlSegmentApiVersionReader();
+            });
         }
 
         private static void AddListImport(WebApplicationBuilder builder)
