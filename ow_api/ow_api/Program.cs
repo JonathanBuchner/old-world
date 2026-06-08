@@ -1,8 +1,8 @@
 
 using ow_api.Application;
 using ow_api.Infrastructure.DependencyInjection;
-using ow_api.Infrastructure.Settings;
 using ow_api.Infrastructure.Middleware;
+using ow_api.Infrastructure.Settings;
 
 namespace ow_api;
 
@@ -16,17 +16,11 @@ public class Program
         ConfigurationRegisterer.AddConfiguration(builder);
         ServicesRegisterer.All(builder);
         ApplicationRegisterer.All(builder);
-        
-        builder.Services.AddControllers();
+        ControllersRegisterer.Add(builder);
+
         var app = builder.Build();
 
-        // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
-        {
-            // app.MapOpenApi();
-        }
-
-        app.UseMiddleware<ExceptionTrackingMiddleware>();
+        AddMiddlewarePipeline.All(app);
         app.UseHttpsRedirection();
         app.UseAuthorization();
         app.MapControllers();

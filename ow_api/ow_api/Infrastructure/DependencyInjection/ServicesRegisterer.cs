@@ -16,6 +16,7 @@ namespace ow_api.Infrastructure.DependencyInjection
             AddTelemetryTracker(builder);
             AddBlobStorage(builder);
             AddApiVersioning(builder);
+            AddSwagger(builder);
         }
 
         private static void AddApiVersioning(WebApplicationBuilder builder)
@@ -26,7 +27,23 @@ namespace ow_api.Infrastructure.DependencyInjection
                 options.AssumeDefaultVersionWhenUnspecified = false;
                 options.ReportApiVersions = true;
                 options.ApiVersionReader = new UrlSegmentApiVersionReader();
+            })
+            .AddApiExplorer(options =>
+            {
+                options.GroupNameFormat = "'v'V";
+                options.SubstituteApiVersionInUrl = true;
             });
+        }
+
+        private static void AddSwagger(WebApplicationBuilder builder)
+        {
+            var settings = builder.Configuration.GetSection(nameof(OldWorldApiSettings)).Get<OldWorldApiSettings>();
+
+            if (!builder.Environment.IsDevelopment() || settings?.EnableSwagger != true)
+                return;
+
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddSwaggerGen();
         }
 
         private static void AddBlobStorage(WebApplicationBuilder builder)
