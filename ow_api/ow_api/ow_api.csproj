@@ -21,4 +21,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="10.1.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ow_gen_lib\ow_gen_lib.csproj" />
+  </ItemGroup>
+
 </Project>

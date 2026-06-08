@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ow_gen_lib\ow_gen_lib.csproj" />
-    <ProjectReference Include="..\ow_odds_lib\ow_odds_lib.csproj" />
+    <ProjectReference Include="..\ow_odds_lib\ow_odds_152r_lib.csproj" />
   </ItemGroup>
 
   <ItemGroup>

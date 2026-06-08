@@ -1,12 +1,12 @@
 using Asp.Versioning;
 using Azure.Monitor.OpenTelemetry.AspNetCore;
 using Azure.Storage.Blobs;
-using ow_api.Application.ListImport;
-using ow_api.Application.ListImport.OldWorldBuilder;
+using ow_api.Infrastructure.Services;
+using ow_api.Infrastructure.Settings;
 using ow_api.Infrastructure.Telemetry;
 using OwTelemetry = ow_api.Infrastructure.Telemetry.Telemetry;
 
-namespace ow_api.Infrastructure.Services
+namespace ow_api.Infrastructure.DependencyInjection
 {
     public static class ServicesRegisterer
     {
@@ -15,7 +15,6 @@ namespace ow_api.Infrastructure.Services
             AddOpenTelemetry(builder);
             AddTelemetryTracker(builder);
             AddBlobStorage(builder);
-            AddListImport(builder);
             AddApiVersioning(builder);
         }
 
@@ -28,12 +27,6 @@ namespace ow_api.Infrastructure.Services
                 options.ReportApiVersions = true;
                 options.ApiVersionReader = new UrlSegmentApiVersionReader();
             });
-        }
-
-        private static void AddListImport(WebApplicationBuilder builder)
-        {
-            builder.Services.AddSingleton<JsonListBuilderDetector>();
-            builder.Services.AddSingleton<OldWorldBuilderJsonParser>();
         }
 
         private static void AddBlobStorage(WebApplicationBuilder builder)

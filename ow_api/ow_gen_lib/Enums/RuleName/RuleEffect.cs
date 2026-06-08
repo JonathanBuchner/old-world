@@ -20,11 +20,13 @@ namespace ow_gen_lib.Enums.SpecialRules
 
         #region General Rules
         Hatred,                 // Reroll misses                            
+        CloseOrder,
         CleavingBlow,           // 6's may ignore arm & rege                    https://tow.whfb.app/special-rules/cleaving-blow
         ElvenReflexes,          // +1 Initiative first round of combat          https://tow.whfb.app/special-rules/elven-reflexes
         KillingBlow,            // 6's may ignore arm & rege & multi wound      https://tow.whfb.app/special-rules/killing-blow                    
         MartialProwess,         // Supporting attacks to flank or rear          https://tow.whfb.app/special-rules/martial-prowess
         MonsterSlayer,
+        Veteran,
         WillOfTheGods,
         ArmorBane1,
         ArmorBane2,

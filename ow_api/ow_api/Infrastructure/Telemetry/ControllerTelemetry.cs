@@ -1,14 +1,19 @@
+using Microsoft.Extensions.Options;
+using ow_api.Infrastructure.Settings;
+
 namespace ow_api.Infrastructure.Telemetry
 {
     public class ControllerTelemetry : IControllerTelemetry
     {
         private readonly ITelemetryTracker _telemetryTracker;
         private readonly ILogger<ControllerTelemetry> _logger;
+        private readonly GameRulesSettings _gameRulesSettings;
 
-        public ControllerTelemetry(ITelemetryTracker telemetryTracker, ILogger<ControllerTelemetry> logger)
+        public ControllerTelemetry(ITelemetryTracker telemetryTracker, ILogger<ControllerTelemetry> logger, IOptions<GameRulesSettings> gameRulesOptions)
         {
             _telemetryTracker = telemetryTracker;
             _logger = logger;
+            _gameRulesSettings = gameRulesOptions.Value;
         }
 
         public void TrackEvent<TController>(ControllerTelemetryContext<TController> context)
@@ -35,9 +40,12 @@ namespace ow_api.Infrastructure.Telemetry
             _logger.LogWarning(exception, "Controller telemetry exception tracked: {ErrorName}", context.Name);
         }
 
-        private static Dictionary<string, object?> BuildTags<TController>(ControllerTelemetryContext<TController> context)
+        private Dictionary<string, object?> BuildTags<TController>(ControllerTelemetryContext<TController> context)
         {
             var tags = new Dictionary<string, object?>(context.Tags);
+
+            if (!tags.ContainsKey("game.version"))
+                tags["game.version"] = _gameRulesSettings.DefaultGameVersion.ToString();
 
             tags["controller"] = typeof(TController).Name;
             tags["action"] = context.ActionName;

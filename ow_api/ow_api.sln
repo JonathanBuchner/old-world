@@ -5,11 +5,11 @@ VisualStudioVersion = 18.4.11626.88
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ow_api", "ow_api\ow_api.csproj", "{7C4379A5-3A39-474F-AE12-FC3609D0838C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ow_odds_lib", "ow_odds_lib\ow_odds_lib.csproj", "{AAAFE711-E9A6-4F70-A86D-D8F862380C79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ow_odds_152r_lib", "ow_odds_lib\ow_odds_152r_lib.csproj", "{AAAFE711-E9A6-4F70-A86D-D8F862380C79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ow_gen_lib", "ow_gen_lib\ow_gen_lib.csproj", "{41512526-767B-4430-BFCC-4181E5F43FC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ow_odds_lib_tests", "ow_odds_lib_tests\ow_odds_lib_tests.csproj", "{A6E5ABE2-501A-4F41-AD77-390265A20273}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ow_odds_152r_lib_tests", "ow_odds_lib_tests\ow_odds_152r_lib_tests.csproj", "{A6E5ABE2-501A-4F41-AD77-390265A20273}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

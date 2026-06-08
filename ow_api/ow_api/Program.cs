@@ -1,5 +1,6 @@
 
-using ow_api.Infrastructure.Services;
+using ow_api.Application;
+using ow_api.Infrastructure.DependencyInjection;
 using ow_api.Infrastructure.Settings;
 using ow_api.Infrastructure.Middleware;
 
@@ -14,6 +15,7 @@ public class Program
 
         ConfigurationRegisterer.AddConfiguration(builder);
         ServicesRegisterer.All(builder);
+        ApplicationRegisterer.All(builder);
         
         builder.Services.AddControllers();
         var app = builder.Build();

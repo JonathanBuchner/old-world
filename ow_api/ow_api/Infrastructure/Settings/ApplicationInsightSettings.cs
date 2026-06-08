@@ -1,4 +1,4 @@
-﻿namespace ow_api.Infrastructure.Services
+﻿namespace ow_api.Infrastructure.Settings
 {
     /// <summary>
     /// Appliation insights settigns.

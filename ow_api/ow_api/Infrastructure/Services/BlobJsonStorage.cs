@@ -1,4 +1,5 @@
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace ow_api.Infrastructure.Services
 {
@@ -12,6 +13,7 @@ namespace ow_api.Infrastructure.Services
         {
             _blobStorage = blobStorage;
             _jsonSerializerOptions = new JsonSerializerOptions(JsonSerializerDefaults.Web);
+            _jsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
         }
 
         public Task<T?> ReadAsync<T>(string containerName, string blobName)

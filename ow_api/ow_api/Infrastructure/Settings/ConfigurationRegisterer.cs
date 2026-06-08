@@ -32,11 +32,18 @@ namespace ow_api.Infrastructure.Settings
             builder.Services
                 .AddOptions<ApplicationInsightsSettings>()
                 .Bind(builder.Configuration.GetSection(nameof(ApplicationInsightsSettings)))
-                .ValidateDataAnnotations();
+                .ValidateDataAnnotations()
+                .ValidateOnStart();
 
             builder.Services
                 .AddOptions<AzureStorageSettings>()
                 .Bind(builder.Configuration.GetSection(nameof(AzureStorageSettings)))
+                .ValidateDataAnnotations()
+                .ValidateOnStart();
+
+            builder.Services
+                .AddOptions<GameRulesSettings>()
+                .Bind(builder.Configuration.GetSection(nameof(GameRulesSettings)))
                 .ValidateDataAnnotations()
                 .ValidateOnStart();
         }

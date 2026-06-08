@@ -12,3 +12,4 @@ namespace ow_gen_lib.Models
         public Uri Url { get; set; } = new Uri("https://tow.whfb.app/bad_link");
     }
 }
+
