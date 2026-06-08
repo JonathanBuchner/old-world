@@ -3,7 +3,7 @@ using ow_gen_lib.Enums.Spells;
 
 namespace ow_gen_lib.Models
 {
-    public abstract class SpellProfile : Entity
+    public class SpellProfile : Entry
     {
         public SpellType Type { get; set; }
         public SpellLore Lore { get; set; }

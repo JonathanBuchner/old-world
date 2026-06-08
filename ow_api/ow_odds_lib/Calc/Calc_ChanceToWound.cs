@@ -42,17 +42,17 @@ namespace ow_odds_lib.Calc
         private static void AddStrengthAndToughnessAdjustments(ChanceToWoundParams p)
         {
             var addToAttackerWS = p.AttR.CountRelaventRules(
-                    RuleName.Add1Attr
+                    RuleEffect.Add1Attr
                 );
             var subtractFromAttackerWs = p.AttR.CountRelaventRules(
-                    RuleName.Subtract1Attr
+                    RuleEffect.Subtract1Attr
                 );
 
             var addToDefenderWs = p.DefR.CountRelaventRules(
-                    RuleName.Add1Attr
+                    RuleEffect.Add1Attr
                 );
             var subtractFromDefenderWs = p.DefR.CountRelaventRules(
-                    RuleName.Subtract1Attr
+                    RuleEffect.Subtract1Attr
                 );
 
             p.AttS += addToAttackerWS - subtractFromAttackerWs;
@@ -65,10 +65,10 @@ namespace ow_odds_lib.Calc
         private static void AddToWoundAdjustments(RollStat r, ChanceToWoundParams p)
         {
             var addToAtt = p.AttR.CountRelaventRules(
-                    RuleName.Add1Result
+                    RuleEffect.Add1Result
                 );
             var subToAtt = p.DefR.CountRelaventRules(
-                    RuleName.Subtract1Result
+                    RuleEffect.Subtract1Result
                 );
 
             r.RegHits.Numerator += addToAtt - subToAtt;
@@ -79,16 +79,16 @@ namespace ow_odds_lib.Calc
         private static void OverrideToWound(RollStat r, ChanceToWoundParams p)
         {
             var alwaysWoundOn2 = p.AttR.CountRelaventRules(
-                    RuleName.AlwaysWoundOn2
+                    RuleEffect.AlwaysWoundOn2
                 );
             var alwaysWoundOn3 = p.AttR.CountRelaventRules(
-                    RuleName.AlwaysWoundOn3
+                    RuleEffect.AlwaysWoundOn3
                 );
             var alwaysWoundOn4 = p.AttR.CountRelaventRules(
-                    RuleName.AlwaysWoundOn4
+                    RuleEffect.AlwaysWoundOn4
                 );
             var alwaysWoundOn5 = p.AttR.CountRelaventRules(
-                    RuleName.AlwaysWoundOn5
+                    RuleEffect.AlwaysWoundOn5
                 );
 
             if (alwaysWoundOn5 > 0)
@@ -151,14 +151,14 @@ namespace ow_odds_lib.Calc
         private static void AddSpecial6Rules(RollStat r, ChanceToWoundParams p)
         {
             r.UniqueSixEffect = p.AttR.FindRelaventRules(
-                    RuleName.CleavingBlow,
-                    RuleName.KillingBlow,
-                    RuleName.MonsterSlayer,
-                    RuleName.ArmorBane1,
-                    RuleName.ArmorBane2,
-                    RuleName.ArmorBane3,
-                    RuleName.ArmorBane4,
-                    RuleName.ArmorBane5
+                    RuleEffect.CleavingBlow,
+                    RuleEffect.KillingBlow,
+                    RuleEffect.MonsterSlayer,
+                    RuleEffect.ArmorBane1,
+                    RuleEffect.ArmorBane2,
+                    RuleEffect.ArmorBane3,
+                    RuleEffect.ArmorBane4,
+                    RuleEffect.ArmorBane5
                 );
 
             if (r.UniqueSixEffect.Count > 0)
@@ -169,7 +169,7 @@ namespace ow_odds_lib.Calc
         private static bool CheckFor_RerollSuccessesToWound(ChanceToWoundParams p)
         {
             var count = p.DefR.CountRelaventRules(
-                    RuleName.RerollSuccesses
+                    RuleEffect.RerollSuccesses
                 );
 
             return count > 0;
@@ -178,7 +178,7 @@ namespace ow_odds_lib.Calc
         private static bool CheckFor_RerollFailuresToWound(ChanceToWoundParams p)
         {
             var count = p.AttR.CountRelaventRules(
-                    RuleName.RerollMisses
+                    RuleEffect.RerollMisses
                 );
 
             return count > 0;
@@ -187,7 +187,7 @@ namespace ow_odds_lib.Calc
         private static bool CheckFor_Reroll6ToWound(ChanceToWoundParams p)
         {
             var count = p.DefR.CountRelaventRules(
-                    RuleName.Reroll6
+                    RuleEffect.Reroll6
                 );
 
             return count > 0;
@@ -196,7 +196,7 @@ namespace ow_odds_lib.Calc
         private static bool CheckFor_Reroll1ToWound(ChanceToWoundParams p)
         {
             var count = p.AttR.CountRelaventRules(
-                    RuleName.Reroll1
+                    RuleEffect.Reroll1
                 );
 
             return count > 0;

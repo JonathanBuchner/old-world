@@ -39,10 +39,10 @@ namespace ow_odds_lib.Calc
         private static void AddArmorSaveResultAdjustments(RollStat r, ChanceToSucceedArmorParams p)
         {
             var addToArmorSave = p.ArmorRules.CountRelaventRules(
-                    RuleName.Add1Result
+                    RuleEffect.Add1Result
                 );
             var subtractFromArmorSave = p.OpponentRules.CountRelaventRules(
-                    RuleName.Subtract1Result
+                    RuleEffect.Subtract1Result
                 );
 
             r.RegHits.Numerator += addToArmorSave - subtractFromArmorSave;
@@ -53,19 +53,19 @@ namespace ow_odds_lib.Calc
         private static void OverrideArmorSave(RollStat r, ChanceToSucceedArmorParams p)
         {
             var alwaysArmorSaveOn2 = p.ArmorRules.CountRelaventRules(
-                    RuleName.AlwaysArmorSaveOn2
+                    RuleEffect.AlwaysArmorSaveOn2
                 );
             var alwaysArmorSaveOn3 = p.ArmorRules.CountRelaventRules(
-                    RuleName.AlwaysArmorSaveOn3
+                    RuleEffect.AlwaysArmorSaveOn3
                 );
             var alwaysArmorSaveOn4 = p.ArmorRules.CountRelaventRules(
-                    RuleName.AlwaysArmorSaveOn4
+                    RuleEffect.AlwaysArmorSaveOn4
                 );
             var alwaysArmorSaveOn5 = p.ArmorRules.CountRelaventRules(
-                    RuleName.AlwaysArmorSaveOn5
+                    RuleEffect.AlwaysArmorSaveOn5
                 );
             var alwaysArmorSaveOn6 = p.ArmorRules.CountRelaventRules(
-                    RuleName.AlwaysArmorSaveOn6
+                    RuleEffect.AlwaysArmorSaveOn6
                 );
 
             if (alwaysArmorSaveOn6 > 0)
@@ -122,7 +122,7 @@ namespace ow_odds_lib.Calc
         private static bool CheckFor_RerollSuccessesToArmorSave(ChanceToSucceedArmorParams p)
         {
             var count = p.OpponentRules.CountRelaventRules(
-                    RuleName.RerollSuccesses
+                    RuleEffect.RerollSuccesses
                 );
 
             return count > 0;
@@ -131,7 +131,7 @@ namespace ow_odds_lib.Calc
         private static bool CheckFor_RerollFailuresToArmorSave(ChanceToSucceedArmorParams p)
         {
             var count = p.ArmorRules.CountRelaventRules(
-                    RuleName.RerollMisses
+                    RuleEffect.RerollMisses
                 );
 
             return count > 0;
@@ -140,7 +140,7 @@ namespace ow_odds_lib.Calc
         private static bool CheckFor_Reroll6ToArmorSave(ChanceToSucceedArmorParams p)
         {
             var count = p.OpponentRules.CountRelaventRules(
-                    RuleName.Reroll6
+                    RuleEffect.Reroll6
                 );
 
             return count > 0;
@@ -149,7 +149,7 @@ namespace ow_odds_lib.Calc
         private static bool CheckFor_Reroll1ToArmorSave(ChanceToSucceedArmorParams p)
         {
             var count = p.ArmorRules.CountRelaventRules(
-                    RuleName.Reroll1
+                    RuleEffect.Reroll1
                 );
 
             return count > 0;

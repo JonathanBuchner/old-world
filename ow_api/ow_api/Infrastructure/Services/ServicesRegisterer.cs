@@ -1,6 +1,7 @@
 using Azure.Monitor.OpenTelemetry.AspNetCore;
 using Azure.Storage.Blobs;
 using ow_api.Application.ListImport;
+using ow_api.Application.ListImport.OldWorldBuilder;
 using ow_api.Infrastructure.Telemetry;
 using OwTelemetry = ow_api.Infrastructure.Telemetry.Telemetry;
 
@@ -19,6 +20,7 @@ namespace ow_api.Infrastructure.Services
         private static void AddListImport(WebApplicationBuilder builder)
         {
             builder.Services.AddSingleton<JsonListBuilderDetector>();
+            builder.Services.AddSingleton<OldWorldBuilderJsonParser>();
         }
 
         private static void AddBlobStorage(WebApplicationBuilder builder)

@@ -8,7 +8,7 @@ using ow_gen_lib.Enums.TroopType;
 
 namespace ow_gen_lib.Models.Profile
 {
-    public abstract class ModelProfile : Entry
+    public class ModelProfile : Entry
     {
         public int Movement { get; set; }
         public int WeaponSkill { get; set; }

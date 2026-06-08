@@ -6,8 +6,8 @@ namespace ow_api.Infrastructure.Telemetry
     {
         Activity? StartActivity(string name);
         void TrackEvent(string eventName);
-        void TrackEvent(string eventName, Dictionary<string, object?> dimensions);
+        void TrackEvent(string eventName, Dictionary<string, object?> tags);
         void TrackError(string errorName);
-        void TrackError(string errorName, Dictionary<string, object?> dimensions);
+        void TrackError(string errorName, Dictionary<string, object?> tags);
     }
 }

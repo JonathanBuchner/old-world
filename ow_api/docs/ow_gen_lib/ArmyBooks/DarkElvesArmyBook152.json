@@ -1,0 +1,449 @@
+﻿{
+    "gameVersion":  "OldWorldV152Renegade",
+    "faction":  "DarkElves",
+    "modelEntries":  [
+                         {
+                             "nameId":  "dark-elf-warrior",
+                             "troopType":  "Infantry",
+                             "troopSubtype":  "Regular",
+                             "classification":  "Core",
+                             "classificationSub":  "Normal",
+                             "baseSize":  "Size25By25",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "dark-elf-warrior-profile",
+                                                  "pointCost":  8,
+                                                  "movement":  5,
+                                                  "weaponSkill":  4,
+                                                  "ballisticSkill":  4,
+                                                  "strength":  3,
+                                                  "toughness":  3,
+                                                  "wounds":  1,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  8
+                                              }
+                                          ]
+                         },
+                         {
+                             "nameId":  "dark-elf-warrior-champion",
+                             "troopType":  "Infantry",
+                             "troopSubtype":  "Regular",
+                             "classification":  "Core",
+                             "classificationSub":  "Champion",
+                             "baseSize":  "Size25By25",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "dark-elf-warrior-champion-profile",
+                                                  "pointCost":  13,
+                                                  "movement":  5,
+                                                  "weaponSkill":  4,
+                                                  "ballisticSkill":  4,
+                                                  "strength":  3,
+                                                  "toughness":  3,
+                                                  "wounds":  1,
+                                                  "initiative":  4,
+                                                  "attacks":  2,
+                                                  "leadership":  8
+                                              }
+                                          ]
+                         },
+                         {
+                             "nameId":  "dark-elf-warrior-banner",
+                             "troopType":  "Infantry",
+                             "troopSubtype":  "Regular",
+                             "classification":  "Core",
+                             "classificationSub":  "Banner",
+                             "baseSize":  "Size25By25",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "dark-elf-warrior-banner-profile",
+                                                  "pointCost":  13,
+                                                  "movement":  5,
+                                                  "weaponSkill":  4,
+                                                  "ballisticSkill":  4,
+                                                  "strength":  3,
+                                                  "toughness":  3,
+                                                  "wounds":  1,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  8
+                                              }
+                                          ]
+                         },
+                         {
+                             "nameId":  "dark-elf-warrior-musician",
+                             "troopType":  "Infantry",
+                             "troopSubtype":  "Regular",
+                             "classification":  "Core",
+                             "classificationSub":  "Musician",
+                             "baseSize":  "Size25By25",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "dark-elf-warrior-musician-profile",
+                                                  "pointCost":  13,
+                                                  "movement":  5,
+                                                  "weaponSkill":  4,
+                                                  "ballisticSkill":  4,
+                                                  "strength":  3,
+                                                  "toughness":  3,
+                                                  "wounds":  1,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  8
+                                              }
+                                          ]
+                         },
+                         {
+                             "nameId":  "repeater-crossbowman",
+                             "troopType":  "Infantry",
+                             "troopSubtype":  "Regular",
+                             "classification":  "Core",
+                             "classificationSub":  "Normal",
+                             "baseSize":  "Size25By25",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "repeater-crossbowman-profile",
+                                                  "pointCost":  10,
+                                                  "movement":  5,
+                                                  "weaponSkill":  4,
+                                                  "ballisticSkill":  4,
+                                                  "strength":  3,
+                                                  "toughness":  3,
+                                                  "wounds":  1,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  8
+                                              }
+                                          ]
+                         },
+                         {
+                             "nameId":  "repeater-crossbowman-champion",
+                             "troopType":  "Infantry",
+                             "troopSubtype":  "Regular",
+                             "classification":  "Core",
+                             "classificationSub":  "Champion",
+                             "baseSize":  "Size25By25",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "repeater-crossbowman-champion-profile",
+                                                  "pointCost":  15,
+                                                  "movement":  5,
+                                                  "weaponSkill":  4,
+                                                  "ballisticSkill":  5,
+                                                  "strength":  3,
+                                                  "toughness":  3,
+                                                  "wounds":  1,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  8
+                                              }
+                                          ]
+                         },
+                         {
+                             "nameId":  "repeater-crossbowman-banner",
+                             "troopType":  "Infantry",
+                             "troopSubtype":  "Regular",
+                             "classification":  "Core",
+                             "classificationSub":  "Banner",
+                             "baseSize":  "Size25By25",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "repeater-crossbowman-banner-profile",
+                                                  "pointCost":  15,
+                                                  "movement":  5,
+                                                  "weaponSkill":  4,
+                                                  "ballisticSkill":  4,
+                                                  "strength":  3,
+                                                  "toughness":  3,
+                                                  "wounds":  1,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  8
+                                              }
+                                          ]
+                         },
+                         {
+                             "nameId":  "repeater-crossbowman-musician",
+                             "troopType":  "Infantry",
+                             "troopSubtype":  "Regular",
+                             "classification":  "Core",
+                             "classificationSub":  "Musician",
+                             "baseSize":  "Size25By25",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "repeater-crossbowman-musician-profile",
+                                                  "pointCost":  15,
+                                                  "movement":  5,
+                                                  "weaponSkill":  4,
+                                                  "ballisticSkill":  4,
+                                                  "strength":  3,
+                                                  "toughness":  3,
+                                                  "wounds":  1,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  8
+                                              }
+                                          ]
+                         },
+                         {
+                             "nameId":  "black-ark-corsair",
+                             "troopType":  "Infantry",
+                             "troopSubtype":  "Regular",
+                             "classification":  "Core",
+                             "classificationSub":  "Normal",
+                             "baseSize":  "Size25By25",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "black-ark-corsair-profile",
+                                                  "pointCost":  11,
+                                                  "movement":  5,
+                                                  "weaponSkill":  4,
+                                                  "ballisticSkill":  4,
+                                                  "strength":  3,
+                                                  "toughness":  3,
+                                                  "wounds":  1,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  8
+                                              }
+                                          ]
+                         },
+                         {
+                             "nameId":  "black-ark-corsair-champion",
+                             "troopType":  "Infantry",
+                             "troopSubtype":  "Regular",
+                             "classification":  "Core",
+                             "classificationSub":  "Champion",
+                             "baseSize":  "Size25By25",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "black-ark-corsair-champion-profile",
+                                                  "pointCost":  17,
+                                                  "movement":  5,
+                                                  "weaponSkill":  4,
+                                                  "ballisticSkill":  4,
+                                                  "strength":  3,
+                                                  "toughness":  3,
+                                                  "wounds":  1,
+                                                  "initiative":  4,
+                                                  "attacks":  2,
+                                                  "leadership":  8
+                                              }
+                                          ]
+                         },
+                         {
+                             "nameId":  "black-ark-corsair-banner",
+                             "troopType":  "Infantry",
+                             "troopSubtype":  "Regular",
+                             "classification":  "Core",
+                             "classificationSub":  "Banner",
+                             "baseSize":  "Size25By25",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "black-ark-corsair-banner-profile",
+                                                  "pointCost":  17,
+                                                  "movement":  5,
+                                                  "weaponSkill":  4,
+                                                  "ballisticSkill":  4,
+                                                  "strength":  3,
+                                                  "toughness":  3,
+                                                  "wounds":  1,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  8
+                                              }
+                                          ]
+                         },
+                         {
+                             "nameId":  "black-ark-corsair-musician",
+                             "troopType":  "Infantry",
+                             "troopSubtype":  "Regular",
+                             "classification":  "Core",
+                             "classificationSub":  "Musician",
+                             "baseSize":  "Size25By25",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "black-ark-corsair-musician-profile",
+                                                  "pointCost":  17,
+                                                  "movement":  5,
+                                                  "weaponSkill":  4,
+                                                  "ballisticSkill":  4,
+                                                  "strength":  3,
+                                                  "toughness":  3,
+                                                  "wounds":  1,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  8
+                                              }
+                                          ]
+                         },
+                         {
+                             "nameId":  "dark-rider",
+                             "troopType":  "Cavalry",
+                             "troopSubtype":  "Light",
+                             "classification":  "Core",
+                             "classificationSub":  "Normal",
+                             "baseSize":  "Size30By60",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "dark-rider-rider-profile",
+                                                  "pointCost":  16,
+                                                  "movement":  0,
+                                                  "weaponSkill":  4,
+                                                  "ballisticSkill":  4,
+                                                  "strength":  3,
+                                                  "toughness":  3,
+                                                  "wounds":  1,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  8
+                                              },
+                                              {
+                                                  "nameId":  "dark-rider-steed-profile",
+                                                  "pointCost":  0,
+                                                  "movement":  9,
+                                                  "weaponSkill":  3,
+                                                  "ballisticSkill":  0,
+                                                  "strength":  3,
+                                                  "toughness":  0,
+                                                  "wounds":  0,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  0
+                                              }
+                                          ]
+                         },
+                         {
+                             "nameId":  "dark-rider-champion",
+                             "troopType":  "Cavalry",
+                             "troopSubtype":  "Light",
+                             "classification":  "Core",
+                             "classificationSub":  "Champion",
+                             "baseSize":  "Size30By60",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "dark-rider-champion-rider-profile",
+                                                  "pointCost":  22,
+                                                  "movement":  0,
+                                                  "weaponSkill":  4,
+                                                  "ballisticSkill":  4,
+                                                  "strength":  3,
+                                                  "toughness":  3,
+                                                  "wounds":  1,
+                                                  "initiative":  4,
+                                                  "attacks":  2,
+                                                  "leadership":  8
+                                              },
+                                              {
+                                                  "nameId":  "dark-rider-champion-steed-profile",
+                                                  "pointCost":  0,
+                                                  "movement":  9,
+                                                  "weaponSkill":  3,
+                                                  "ballisticSkill":  0,
+                                                  "strength":  3,
+                                                  "toughness":  0,
+                                                  "wounds":  0,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  0
+                                              }
+                                          ]
+                         },
+                         {
+                             "nameId":  "dark-rider-banner",
+                             "troopType":  "Cavalry",
+                             "troopSubtype":  "Light",
+                             "classification":  "Core",
+                             "classificationSub":  "Banner",
+                             "baseSize":  "Size30By60",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "dark-rider-banner-rider-profile",
+                                                  "pointCost":  22,
+                                                  "movement":  0,
+                                                  "weaponSkill":  4,
+                                                  "ballisticSkill":  4,
+                                                  "strength":  3,
+                                                  "toughness":  3,
+                                                  "wounds":  1,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  8
+                                              },
+                                              {
+                                                  "nameId":  "dark-rider-banner-steed-profile",
+                                                  "pointCost":  0,
+                                                  "movement":  9,
+                                                  "weaponSkill":  3,
+                                                  "ballisticSkill":  0,
+                                                  "strength":  3,
+                                                  "toughness":  0,
+                                                  "wounds":  0,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  0
+                                              }
+                                          ]
+                         },
+                         {
+                             "nameId":  "dark-rider-musician",
+                             "troopType":  "Cavalry",
+                             "troopSubtype":  "Light",
+                             "classification":  "Core",
+                             "classificationSub":  "Musician",
+                             "baseSize":  "Size30By60",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "dark-rider-musician-rider-profile",
+                                                  "pointCost":  22,
+                                                  "movement":  0,
+                                                  "weaponSkill":  4,
+                                                  "ballisticSkill":  4,
+                                                  "strength":  3,
+                                                  "toughness":  3,
+                                                  "wounds":  1,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  8
+                                              },
+                                              {
+                                                  "nameId":  "dark-rider-musician-steed-profile",
+                                                  "pointCost":  0,
+                                                  "movement":  9,
+                                                  "weaponSkill":  3,
+                                                  "ballisticSkill":  0,
+                                                  "strength":  3,
+                                                  "toughness":  0,
+                                                  "wounds":  0,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  0
+                                              }
+                                          ]
+                         },
+                         {
+                             "nameId":  "dark-steed",
+                             "troopType":  "Cavalry",
+                             "troopSubtype":  "Light",
+                             "classification":  "Core",
+                             "classificationSub":  "Normal",
+                             "baseSize":  "Size30By60",
+                             "profiles":  [
+                                              {
+                                                  "nameId":  "dark-steed-profile",
+                                                  "pointCost":  0,
+                                                  "movement":  9,
+                                                  "weaponSkill":  3,
+                                                  "ballisticSkill":  0,
+                                                  "strength":  3,
+                                                  "toughness":  0,
+                                                  "wounds":  0,
+                                                  "initiative":  4,
+                                                  "attacks":  1,
+                                                  "leadership":  0
+                                              }
+                                          ]
+                         }
+                     ]
+}

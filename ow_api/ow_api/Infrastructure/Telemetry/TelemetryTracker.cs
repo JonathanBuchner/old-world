@@ -14,9 +14,9 @@ namespace ow_api.Infrastructure.Telemetry
             Telemetry.TrackEvent(eventName);
         }
 
-        public void TrackEvent(string eventName, Dictionary<string, object?> dimensions)
+        public void TrackEvent(string eventName, Dictionary<string, object?> tags)
         {
-            Telemetry.TrackEvent(eventName, dimensions);
+            Telemetry.TrackEvent(eventName, tags);
         }
 
         public void TrackError(string errorName)
@@ -24,9 +24,9 @@ namespace ow_api.Infrastructure.Telemetry
             Telemetry.TrackError(errorName);
         }
 
-        public void TrackError(string errorName, Dictionary<string, object?> dimensions)
+        public void TrackError(string errorName, Dictionary<string, object?> tags)
         {
-            Telemetry.TrackError(errorName, dimensions);
+            Telemetry.TrackError(errorName, tags);
         }
     }
 }

@@ -21,9 +21,9 @@ namespace ow_api.Infrastructure.Telemetry
             EventsLogged.Add(1, BuildTags("event.name", eventName));
         }
 
-        public static void TrackEvent(string eventName, Dictionary<string, object?> dimensions)
+        public static void TrackEvent(string eventName, Dictionary<string, object?> tags)
         {
-            EventsLogged.Add(1, BuildTags("event.name", eventName, dimensions));
+            EventsLogged.Add(1, BuildTags("event.name", eventName, tags));
         }
 
         public static void TrackError(string errorName)
@@ -31,9 +31,9 @@ namespace ow_api.Infrastructure.Telemetry
             ErrorsLogged.Add(1, BuildTags("error.name", errorName));
         }
 
-        public static void TrackError(string errorName, Dictionary<string, object?> dimensions)
+        public static void TrackError(string errorName, Dictionary<string, object?> tags)
         {
-            ErrorsLogged.Add(1, BuildTags("error.name", errorName, dimensions));
+            ErrorsLogged.Add(1, BuildTags("error.name", errorName, tags));
         }
 
         private static KeyValuePair<string, object?>[] BuildTags(string nameKey, string nameValue)
@@ -41,17 +41,17 @@ namespace ow_api.Infrastructure.Telemetry
             return [new KeyValuePair<string, object?>(nameKey, nameValue)];
         }
 
-        private static KeyValuePair<string, object?>[] BuildTags(string nameKey, string nameValue, Dictionary<string, object?> dimensions)
+        private static KeyValuePair<string, object?>[] BuildTags(string nameKey, string nameValue, Dictionary<string, object?> tags)
         {
-            var tags = new List<KeyValuePair<string, object?>>
+            var allTags = new List<KeyValuePair<string, object?>>
             {
                 new KeyValuePair<string, object?>(nameKey, nameValue)
             };
 
-            foreach (var dimension in dimensions)
-                tags.Add(new KeyValuePair<string, object?>(dimension.Key, dimension.Value));
+            foreach (var tag in tags)
+                allTags.Add(new KeyValuePair<string, object?>(tag.Key, tag.Value));
 
-            return tags.ToArray();
+            return allTags.ToArray();
         }
     }
 }

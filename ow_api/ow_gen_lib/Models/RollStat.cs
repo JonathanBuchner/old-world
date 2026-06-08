@@ -6,8 +6,8 @@ namespace ow_gen_lib.Models
         public Fraction RegHits { get; set; } = new Fraction(0, 1);
         public Fraction UniqueSix { get; set; } = new Fraction(0, 1);
         public Fraction UniqueFive { get; set; } = new Fraction(0, 1);
-        public List<Enums.SpecialRules.RuleName> UniqueSixEffect = [];
-        public List<Enums.SpecialRules.RuleName> UniqueFiveEffect = [];
+        public List<Enums.SpecialRules.RuleEffect> UniqueSixEffect = [];
+        public List<Enums.SpecialRules.RuleEffect> UniqueFiveEffect = [];
 
         public void Reduce()
         {

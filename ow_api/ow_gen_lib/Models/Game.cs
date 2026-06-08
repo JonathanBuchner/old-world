@@ -8,7 +8,7 @@ namespace ow_gen_lib.Models
         public Guid GuidId { get; set; } = Guid.NewGuid();
         public GameVersionEnum GameVersionEnum { get; set; } = GameVersionEnum.Unknown;
         public GameType GameType { get; set; } = GameType.Unknown;
-        public List<ArmyList> ArmyLists { get; set; } = [];
+        public List<ArmyBook> ArmyLists { get; set; } = [];
         public ScenarioEnum ScenarioEnum { get; set; } = ScenarioEnum.Unknown;
         public DateTime Created { get; set; } = DateTime.UtcNow;
         public DateTime Updated { get; set; } = DateTime.UtcNow;

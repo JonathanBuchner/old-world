@@ -12,16 +12,16 @@ namespace ow_api.Application.ListImport
                 throw new InvalidJsonListException("JSON payload must be an object.");
 
             if (!json.TryGetProperty("game", out var game))
-            {
-                if (game.ValueKind != JsonValueKind.String)
-                    throw new InvalidJsonListException("Property 'game' must be a string.");
+                throw new InvalidJsonListException("Missing required property 'game'.");
 
-                switch (game.GetString())
-                {
-                    case "the-old-world":
-                            return JsonFormatType.OldWorldBuilder;
-                };
-            }
+            if (game.ValueKind != JsonValueKind.String)
+                throw new InvalidJsonListException("Property 'game' must be a string.");
+
+            switch (game.GetString())
+            {
+                case "the-old-world":
+                        return JsonFormatType.OldWorldBuilder;
+            };
 
             throw new InvalidJsonListException("JSON format is not recognized.");
         }

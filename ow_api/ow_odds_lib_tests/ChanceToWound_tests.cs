@@ -66,7 +66,7 @@ namespace ow_odds_lib_tests
             {
                 "Add1Attr_4_4",
                 4,
-                Rules(RuleName.Add1Attr),
+                Rules(RuleEffect.Add1Attr),
                 4,
                 Rules(),
                 new RollStat() { RegHits = new Fraction(2, 3), UniqueSix = new Fraction(0, 1) }
@@ -78,7 +78,7 @@ namespace ow_odds_lib_tests
                 4,
                 Rules(),
                 4,
-                Rules(RuleName.Subtract1Attr),
+                Rules(RuleEffect.Subtract1Attr),
                 new RollStat() { RegHits = new Fraction(1, 3), UniqueSix = new Fraction(0, 1) }
             };
 
@@ -86,7 +86,7 @@ namespace ow_odds_lib_tests
             {
                 "Add1Result_4_4",
                 4,
-                Rules(RuleName.Add1Result),
+                Rules(RuleEffect.Add1Result),
                 4,
                 Rules(),
                 new RollStat() { RegHits = new Fraction(2, 3), UniqueSix = new Fraction(0, 1) }
@@ -98,7 +98,7 @@ namespace ow_odds_lib_tests
                 4,
                 Rules(),
                 4,
-                Rules(RuleName.Subtract1Result),
+                Rules(RuleEffect.Subtract1Result),
                 new RollStat() { RegHits = new Fraction(1, 3), UniqueSix = new Fraction(0, 1) }
             };
 
@@ -106,7 +106,7 @@ namespace ow_odds_lib_tests
             {
                 "RerollMisses_4_4",
                 4,
-                Rules(RuleName.RerollMisses),
+                Rules(RuleEffect.RerollMisses),
                 4,
                 Rules(),
                 new RollStat() { RegHits = new Fraction(3, 4), UniqueSix = new Fraction(0, 1) }
@@ -116,7 +116,7 @@ namespace ow_odds_lib_tests
             {
                 "Reroll1_4_4",
                 4,
-                Rules(RuleName.Reroll1),
+                Rules(RuleEffect.Reroll1),
                 4,
                 Rules(),
                 new RollStat() { RegHits = new Fraction(7, 12), UniqueSix = new Fraction(0, 1) }
@@ -128,7 +128,7 @@ namespace ow_odds_lib_tests
                 4,
                 Rules(),
                 4,
-                Rules(RuleName.RerollSuccesses),
+                Rules(RuleEffect.RerollSuccesses),
                 new RollStat() { RegHits = new Fraction(1, 4), UniqueSix = new Fraction(0, 1) }
             };
 
@@ -138,7 +138,7 @@ namespace ow_odds_lib_tests
                 4,
                 Rules(),
                 4,
-                Rules(RuleName.Reroll6),
+                Rules(RuleEffect.Reroll6),
                 new RollStat() { RegHits = new Fraction(5, 12), UniqueSix = new Fraction(0, 1) }
             };
         }
@@ -158,7 +158,7 @@ namespace ow_odds_lib_tests
             return data[0].ToString()!;
         }
 
-        private static RuleList Rules(params RuleName[] rules)
+        private static RuleList Rules(params RuleEffect[] rules)
         {
             var ruleList = new RuleList();
             ruleList.Add(rules);

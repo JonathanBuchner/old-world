@@ -13,7 +13,6 @@ namespace ow_api.Controllers
         [HttpGet("ping")]
         public ActionResult<string> Ping()
         {
-            Logger.LogInformation("Admin ping requested");
             TrackEvent("admin.ping.requested", nameof(Ping));
 
             return Ok("pong");

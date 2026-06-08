@@ -9,6 +9,7 @@ namespace ow_gen_lib.Enums.Spells
         High,
         Illusion,
         Necromancy,
+        Naggaroth,
         Waaag
     }
 }

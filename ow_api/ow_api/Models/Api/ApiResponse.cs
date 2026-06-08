@@ -24,5 +24,14 @@ namespace ow_api.Models.Api
                 Errors = errors.Select(error => new ApiMessage() { Message = error }).ToList()
             };
         }
+
+        public static ApiResponse<T> Fail(List<ApiMessage> errors)
+        {
+            return new ApiResponse<T>()
+            {
+                Success = false,
+                Errors = errors
+            };
+        }
     }
 }

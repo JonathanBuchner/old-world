@@ -1,0 +1,186 @@
+{
+    "gameVersion":  "OldWorldV152Renegade",
+    "equipmentEntries":  [
+                             {
+                                 "nameId":  "hand-weapon",
+                                 "type":  "Weapon",
+                                 "subType":  "CloseCombat",
+                                 "classification":  "Mundane",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/weapons-of-war/hand-weapon"
+                             },
+                             {
+                                 "nameId":  "thrusting-spear",
+                                 "type":  "Weapon",
+                                 "subType":  "CloseCombat",
+                                 "classification":  "Mundane",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/weapons-of-war/thrusting-spear"
+                             },
+                             {
+                                 "nameId":  "light-armour",
+                                 "type":  "Armor",
+                                 "subType":  "LightArmor",
+                                 "classification":  "Mundane",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/weapons-of-war/light-armour"
+                             },
+                             {
+                                 "nameId":  "shield",
+                                 "type":  "Armor",
+                                 "subType":  "Shield",
+                                 "classification":  "Mundane",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/weapons-of-war/shield"
+                             },
+                             {
+                                 "nameId":  "executioners-axe",
+                                 "type":  "Weapon",
+                                 "subType":  "CloseCombat",
+                                 "classification":  "Magic",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/magic-item/executioners-axe"
+                             },
+                             {
+                                 "nameId":  "sword-of-ruin",
+                                 "type":  "Weapon",
+                                 "subType":  "CloseCombat",
+                                 "classification":  "Magic",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/magic-item/sword-of-ruin"
+                             },
+                             {
+                                 "nameId":  "lifetaker",
+                                 "type":  "Weapon",
+                                 "subType":  "Ranged",
+                                 "classification":  "Magic",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/magic-item/lifetaker"
+                             },
+                             {
+                                 "nameId":  "whip-of-agony",
+                                 "type":  "Weapon",
+                                 "subType":  "CloseCombat",
+                                 "classification":  "Magic",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/magic-item/whip-of-agony"
+                             },
+                             {
+                                 "nameId":  "shield-of-ghrond",
+                                 "type":  "Armor",
+                                 "subType":  "Shield",
+                                 "classification":  "Magic",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/magic-item/shield-of-ghrond"
+                             },
+                             {
+                                 "nameId":  "blood-armour",
+                                 "type":  "Armor",
+                                 "subType":  "None",
+                                 "classification":  "Magic",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/magic-item/blood-armour"
+                             },
+                             {
+                                 "nameId":  "pendant-of-khaeleth",
+                                 "type":  "Talisman",
+                                 "subType":  "WardSave",
+                                 "classification":  "Magic",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/magic-item/pendant-of-khaeleth"
+                             },
+                             {
+                                 "nameId":  "pearl-of-infinite-bleakness",
+                                 "type":  "Talisman",
+                                 "subType":  "None",
+                                 "classification":  "Magic",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/magic-item/pearl-of-infinite-bleakness"
+                             },
+                             {
+                                 "nameId":  "banner-of-nagarythe",
+                                 "type":  "Banner",
+                                 "subType":  "Standard",
+                                 "classification":  "Magic",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/magic-item/banner-of-nagarythe"
+                             },
+                             {
+                                 "nameId":  "standard-of-slaughter",
+                                 "type":  "Banner",
+                                 "subType":  "Standard",
+                                 "classification":  "Magic",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/magic-item/standard-of-slaughter"
+                             },
+                             {
+                                 "nameId":  "banner-of-har-ganeth",
+                                 "type":  "Banner",
+                                 "subType":  "Standard",
+                                 "classification":  "Magic",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/magic-item/banner-of-har-ganeth"
+                             },
+                             {
+                                 "nameId":  "cold-blooded-banner",
+                                 "remainingUses":  1,
+                                 "type":  "Banner",
+                                 "subType":  "Standard",
+                                 "classification":  "Magic",
+                                 "uses":  "Limited",
+                                 "url":  "https://tow.whfb.app/magic-item/cold-blooded-banner"
+                             },
+                             {
+                                 "nameId":  "black-dragon-egg",
+                                 "remainingUses":  1,
+                                 "type":  "Enchanted",
+                                 "subType":  "Potion",
+                                 "classification":  "Magic",
+                                 "uses":  "Limited",
+                                 "url":  "https://tow.whfb.app/magic-item/black-dragon-egg"
+                             },
+                             {
+                                 "nameId":  "hydras-tooth",
+                                 "type":  "Enchanted",
+                                 "subType":  "Ranged",
+                                 "classification":  "Magic",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/magic-item/hydras-tooth"
+                             },
+                             {
+                                 "nameId":  "the-guiding-eye",
+                                 "remainingUses":  1,
+                                 "type":  "Enchanted",
+                                 "subType":  "None",
+                                 "classification":  "Magic",
+                                 "uses":  "Limited",
+                                 "url":  "https://tow.whfb.app/magic-item/the-guiding-eye"
+                             },
+                             {
+                                 "nameId":  "black-staff",
+                                 "type":  "Arcane",
+                                 "subType":  "None",
+                                 "classification":  "Magic",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/magic-item/black-staff"
+                             },
+                             {
+                                 "nameId":  "focus-familiar",
+                                 "remainingUses":  1,
+                                 "type":  "Arcane",
+                                 "subType":  "None",
+                                 "classification":  "MagicCommon",
+                                 "uses":  "Limited",
+                                 "url":  "https://tow.whfb.app/magic-item/focus-familiar"
+                             },
+                             {
+                                 "nameId":  "tome-of-furion",
+                                 "type":  "Arcane",
+                                 "subType":  "None",
+                                 "classification":  "MagicCommon",
+                                 "uses":  "Unlimted",
+                                 "url":  "https://tow.whfb.app/magic-item/tome-of-furion"
+                             }
+                         ]
+}
+

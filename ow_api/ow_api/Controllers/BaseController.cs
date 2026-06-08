@@ -21,9 +21,9 @@ namespace ow_api.Controllers
             ControllerTelemetry.TrackEvent(BuildTelemetryContext(eventName, actionName, []));
         }
 
-        protected void TrackEvent(string eventName, string actionName, Dictionary<string, object?> dimensions)
+        protected void TrackEvent(string eventName, string actionName, Dictionary<string, object?> tags)
         {
-            ControllerTelemetry.TrackEvent(BuildTelemetryContext(eventName, actionName, dimensions));
+            ControllerTelemetry.TrackEvent(BuildTelemetryContext(eventName, actionName, tags));
         }
 
         protected void TrackLogError(string errorName, string actionName)
@@ -31,9 +31,9 @@ namespace ow_api.Controllers
             ControllerTelemetry.TrackLogError(BuildTelemetryContext(errorName, actionName, []));
         }
 
-        protected void TrackLogError(string errorName, string actionName, Dictionary<string, object?> dimensions)
+        protected void TrackLogError(string errorName, string actionName, Dictionary<string, object?> tags)
         {
-            ControllerTelemetry.TrackLogError(BuildTelemetryContext(errorName, actionName, dimensions));
+            ControllerTelemetry.TrackLogError(BuildTelemetryContext(errorName, actionName, tags));
         }
 
         protected void TrackLogException(string errorName, string actionName, Exception exception)
@@ -41,19 +41,19 @@ namespace ow_api.Controllers
             TrackLogException(errorName, actionName, exception, []);
         }
 
-        protected void TrackLogException(string errorName, string actionName, Exception exception, Dictionary<string, object?> dimensions)
+        protected void TrackLogException(string errorName, string actionName, Exception exception, Dictionary<string, object?> tags)
         {
-            ControllerTelemetry.TrackLogException(BuildTelemetryContext(errorName, actionName, dimensions), exception);
+            ControllerTelemetry.TrackLogException(BuildTelemetryContext(errorName, actionName, tags), exception);
         }
 
-        private ControllerTelemetryContext<TController> BuildTelemetryContext(string name, string actionName, Dictionary<string, object?> dimensions)
+        private ControllerTelemetryContext<TController> BuildTelemetryContext(string name, string actionName, Dictionary<string, object?> tags)
         {
             return new ControllerTelemetryContext<TController>()
             {
                 Name = name,
                 ActionName = actionName,
                 HttpContext = HttpContext,
-                Dimensions = dimensions
+                Tags = tags
             };
         }
     }

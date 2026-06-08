@@ -1,0 +1,55 @@
+{
+    "gameVersion":  "OldWorldV152Renegade",
+    "rules":  [
+                  {
+                      "nameId":  "cleaving-blow",
+                      "ruleEffect":  "CleavingBlow",
+                      "url":  "https://tow.whfb.app/special-rules/cleaving-blow"
+                  },
+                  {
+                      "nameId":  "elven-reflexes",
+                      "ruleEffect":  "ElvenReflexes",
+                      "url":  "https://tow.whfb.app/special-rules/elven-reflexes"
+                  },
+                  {
+                      "nameId":  "eternal-hatred",
+                      "ruleEffect":  "EternalHatred",
+                      "url":  "https://tow.whfb.app/special-rules/eternal-hatred"
+                  },
+                  {
+                      "nameId":  "will-of-the-gods",
+                      "ruleEffect":  "WillOfTheGods"
+                  },
+                  {
+                      "nameId":  "veteran",
+                      "ruleEffect":  "Veteran",
+                      "url":  "https://tow.whfb.app/special-rules/veteran"
+                  },
+                  {
+                      "nameId":  "close-order",
+                      "ruleEffect":  "CloseOrder",
+                      "url":  "https://tow.whfb.app/special-rules/close-order"
+                  },
+                  {
+                      "nameId":  "hekartis-blessing",
+                      "ruleEffect":  "HekartisBlessing",
+                      "url":  "https://tow.whfb.app/special-rules/hekartis-blessing"
+                  },
+                  {
+                      "nameId":  "martial-prowess",
+                      "ruleEffect":  "MartialProwess",
+                      "url":  "https://tow.whfb.app/special-rules/martial-prowess"
+                  },
+                  {
+                      "nameId":  "murderous",
+                      "ruleEffect":  "Murderous",
+                      "url":  "https://tow.whfb.app/special-rules/murderous"
+                  },
+                  {
+                      "nameId":  "sea-dragon-cloak",
+                      "ruleEffect":  "SeaDragonCloak",
+                      "url":  "https://tow.whfb.app/special-rules/sea-dragon-cloak"
+                  }
+              ]
+}
+

@@ -7,6 +7,6 @@ namespace ow_api.Infrastructure.Telemetry
         public required string Name { get; set; }
         public required string ActionName { get; set; }
         public required HttpContext HttpContext { get; set; }
-        public Dictionary<string, object?> Dimensions { get; set; } = [];
+        public Dictionary<string, object?> Tags { get; set; } = [];
     }
 }

@@ -8,7 +8,7 @@ namespace ow_gen_lib.DataStructures
 {
     public class RuleList : Entry
     {
-        private readonly Dictionary<RuleName, Rule> _rules = [];
+        private readonly Dictionary<RuleEffect, Rule> _rules = [];
         public override EntityTypeEnum EntityType => EntityTypeEnum.Rules;
 
         public void Add(params string[] rules)
@@ -20,7 +20,7 @@ namespace ow_gen_lib.DataStructures
             }
         }
 
-        public void Add(params RuleName[] rules)
+        public void Add(params RuleEffect[] rules)
         {
             foreach (var rule in rules)
             {
@@ -43,7 +43,7 @@ namespace ow_gen_lib.DataStructures
             }
         }
 
-        public void Remove(params RuleName[] rules)
+        public void Remove(params RuleEffect[] rules)
         {
             foreach (var rule in rules)
             {
@@ -53,9 +53,9 @@ namespace ow_gen_lib.DataStructures
             }
         }
 
-        public List<RuleName> FindRelaventRules(params string[] rules)
+        public List<RuleEffect> FindRelaventRules(params string[] rules)
         {
-            var list = new List<RuleName>();
+            var list = new List<RuleEffect>();
 
             foreach (var rule in rules)
             {
@@ -68,9 +68,9 @@ namespace ow_gen_lib.DataStructures
             return list;
         }
 
-        public List<RuleName> FindRelaventRules(params RuleName[] rules)
+        public List<RuleEffect> FindRelaventRules(params RuleEffect[] rules)
         {
-            var list = new List<RuleName>();
+            var list = new List<RuleEffect>();
 
             foreach (var rule in rules)
             {
@@ -96,7 +96,7 @@ namespace ow_gen_lib.DataStructures
             return count;
         }
 
-        public int CountRelaventRules(params RuleName[] rules)
+        public int CountRelaventRules(params RuleEffect[] rules)
         {
             var count = 0;
 
@@ -109,7 +109,7 @@ namespace ow_gen_lib.DataStructures
             return count;
         }
 
-        public bool IsRelevant(RuleName rule)
+        public bool IsRelevant(RuleEffect rule)
         {
             if (!_rules.ContainsKey(rule))
                 return false;
@@ -122,44 +122,44 @@ namespace ow_gen_lib.DataStructures
             return _rules.ContainsKey(ParseRule(rule));
         }
 
-        public bool Contains(RuleName rule) 
+        public bool Contains(RuleEffect rule) 
         {
             return _rules.ContainsKey(rule);
         }
 
-        public IReadOnlyList<RuleName> GetReadOnlyList()
+        public IReadOnlyList<RuleEffect> GetReadOnlyList()
         {
             return _rules.Keys.ToList().AsReadOnly();
         }
 
-        public IReadOnlySet<RuleName> GetReadOnlySet()
+        public IReadOnlySet<RuleEffect> GetReadOnlySet()
         {
             return _rules.Keys.ToHashSet();
         }
 
-        public IReadOnlyDictionary<RuleName, Rule> GetReadOnlyDictionary()
+        public IReadOnlyDictionary<RuleEffect, Rule> GetReadOnlyDictionary()
         {
             return _rules;
         }
 
-        public HashSet<RuleName> GetHashSetCopy()
+        public HashSet<RuleEffect> GetHashSetCopy()
         {
             return _rules.Keys.ToHashSet();
         }
 
-        public List<RuleName> GetListCopy()
+        public List<RuleEffect> GetListCopy()
         {
             return _rules.Keys.ToList();
         }
 
-        public Dictionary<RuleName, Rule> GetDictionaryCopy()
+        public Dictionary<RuleEffect, Rule> GetDictionaryCopy()
         {
             return _rules.ToDictionary(rule => rule.Key, rule => rule.Value);
         }
 
-        public static RuleName ParseRule(string rule)
+        public static RuleEffect ParseRule(string rule)
         {
-            if (Enum.TryParse(rule, ignoreCase: true, out RuleName ruleName))
+            if (Enum.TryParse(rule, ignoreCase: true, out RuleEffect ruleName))
                 return ruleName;
 
             throw new RuleCustomException("Rules: Invalid rule name");

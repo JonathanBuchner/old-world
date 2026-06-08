@@ -1,6 +1,6 @@
 namespace ow_gen_lib.Enums.SpecialRules
 {
-    public enum RuleName
+    public enum RuleEffect
     {
         #region Custom / Testing
         
@@ -21,8 +21,11 @@ namespace ow_gen_lib.Enums.SpecialRules
         #region General Rules
         Hatred,                 // Reroll misses                            
         CleavingBlow,           // 6's may ignore arm & rege                    https://tow.whfb.app/special-rules/cleaving-blow
+        ElvenReflexes,          // +1 Initiative first round of combat          https://tow.whfb.app/special-rules/elven-reflexes
         KillingBlow,            // 6's may ignore arm & rege & multi wound      https://tow.whfb.app/special-rules/killing-blow                    
+        MartialProwess,         // Supporting attacks to flank or rear          https://tow.whfb.app/special-rules/martial-prowess
         MonsterSlayer,
+        WillOfTheGods,
         ArmorBane1,
         ArmorBane2,
         ArmorBane3,
@@ -94,6 +97,13 @@ namespace ow_gen_lib.Enums.SpecialRules
         #endregion
 
         #region High Elves
+        #endregion
+
+        #region DarkElves
+        EternalHatred,          // Hatred against High Elves in every round      https://tow.whfb.app/special-rules/eternal-hatred
+        HekartisBlessing,       // Reroll failed Casting roll                   https://tow.whfb.app/special-rules/hekartis-blessing
+        Murderous,              // Reroll natural 1 To Wound in combat          https://tow.whfb.app/special-rules/murderous
+        SeaDragonCloak,         // +1 armour value against non-magical shooting https://tow.whfb.app/special-rules/sea-dragon-cloak
         #endregion
 
         #region Realms of ment

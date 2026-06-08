@@ -1,0 +1,35 @@
+{
+    "gameVersion":  "OldWorldV152Renegade",
+    "lores":  [
+                  {
+                      "spellLore":  "Naggaroth",
+                      "spellProfiles":  [
+                                            {
+                                                "nameId":  "cursing-word",
+                                                "type":  "Hex",
+                                                "lore":  "Naggaroth",
+                                                "requiredRoll":  9,
+                                                "range":  12,
+                                                "url":  "https://tow.whfb.app/"
+                                            },
+                                            {
+                                                "nameId":  "power-of-darkness",
+                                                "type":  "Enchantment",
+                                                "lore":  "Naggaroth",
+                                                "requiredRoll":  7,
+                                                "range":  0,
+                                                "url":  "https://tow.whfb.app/"
+                                            },
+                                            {
+                                                "nameId":  "black-horror",
+                                                "type":  "Vortex",
+                                                "lore":  "Naggaroth",
+                                                "requiredRoll":  9,
+                                                "range":  18,
+                                                "url":  "https://tow.whfb.app/"
+                                            }
+                                        ]
+                  }
+              ]
+}
+

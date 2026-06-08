@@ -45,19 +45,19 @@ namespace ow_odds_lib.Calc
         {
             // Change attacker WS
             var AddToAtt = p.AttRules.CountRelaventRules(
-                    RuleName.Add1Attr
+                    RuleEffect.Add1Attr
                 );
             var SubToAtt = p.AttRules.CountRelaventRules(
-                    RuleName.Subtract1Attr
+                    RuleEffect.Subtract1Attr
                 );
             p.AttWs += AddToAtt - SubToAtt;
 
             // Change defender WS
             var AddToDef = p.DefRules.CountRelaventRules(
-                    RuleName.Add1Attr
+                    RuleEffect.Add1Attr
                 );
             var SubToDef= p.DefRules.CountRelaventRules(
-                    RuleName.Subtract1Attr
+                    RuleEffect.Subtract1Attr
                 );
             p.DefWs += AddToDef - SubToDef;
 
@@ -69,10 +69,10 @@ namespace ow_odds_lib.Calc
         private static void AddToHitAdjustments(RollStat r, ChanceToHitParams p)
         {
             var AddToAtt = p.AttRules.CountRelaventRules(
-                    RuleName.Add1Result
+                    RuleEffect.Add1Result
                 );
             var SubToAtt = p.DefRules.CountRelaventRules(
-                    RuleName.Subtract1Result
+                    RuleEffect.Subtract1Result
                 );
 
             // Don't account for unique 6 because 6's always hit
@@ -87,16 +87,16 @@ namespace ow_odds_lib.Calc
         private static void OverrideToHit(RollStat r, ChanceToHitParams p)
         {
             var alwaysHitOn2 = p.AttRules.CountRelaventRules(
-                    RuleName.AlwaysHitOn2
+                    RuleEffect.AlwaysHitOn2
                 );
             var alwaysHitOn3 = p.AttRules.CountRelaventRules(
-                    RuleName.AlwaysHitOn3
+                    RuleEffect.AlwaysHitOn3
                 );
             var alwaysHitOn4 = p.AttRules.CountRelaventRules(
-                    RuleName.AlwaysHitOn4
+                    RuleEffect.AlwaysHitOn4
                 );
             var alwaysHitOn5 = p.AttRules.CountRelaventRules(
-                    RuleName.AlwaysHitOn5
+                    RuleEffect.AlwaysHitOn5
                 );
 
             if (alwaysHitOn5 > 0)
@@ -169,7 +169,7 @@ namespace ow_odds_lib.Calc
         private static void AddSpecial6Rules(RollStat r, ChanceToHitParams p)
         {
             r.UniqueSixEffect = p.AttRules.FindRelaventRules(
-                    RuleName.Poison
+                    RuleEffect.Poison
                 );
 
             if (r.UniqueSixEffect.Count > 0)
@@ -180,7 +180,7 @@ namespace ow_odds_lib.Calc
         private static bool CheckFor_RerollSuccessesToHit(ChanceToHitParams p)
         {
             var count = p.DefRules.CountRelaventRules(
-                   RuleName.RerollSuccesses
+                   RuleEffect.RerollSuccesses
                 );
 
             return count > 0;
@@ -189,8 +189,8 @@ namespace ow_odds_lib.Calc
         private static bool CheckFor_RerollFailuresToHit(ChanceToHitParams p)
         {
             var count = p.AttRules.CountRelaventRules(
-                  RuleName.RerollMisses,
-                  RuleName.Hatred
+                  RuleEffect.RerollMisses,
+                  RuleEffect.Hatred
                );
 
             return count > 0;
@@ -199,7 +199,7 @@ namespace ow_odds_lib.Calc
         private static bool CheckFor_Reroll6ToHit(ChanceToHitParams p)
         {
             var count = p.DefRules.CountRelaventRules(
-                   RuleName.Reroll6
+                   RuleEffect.Reroll6
                 );
 
             return count > 0;
@@ -208,11 +208,11 @@ namespace ow_odds_lib.Calc
         private static bool CheckFor_Reroll1ToHit(ChanceToHitParams p)
         {
             var count = p.AttRules.CountRelaventRules(
-                   RuleName.Reroll1,
-                   RuleName.PrimalFury,
-                   RuleName.GrudgeRune,
-                   RuleName.InnerCircle,
-                   RuleName.GuardiansOfTheTemple
+                   RuleEffect.Reroll1,
+                   RuleEffect.PrimalFury,
+                   RuleEffect.GrudgeRune,
+                   RuleEffect.InnerCircle,
+                   RuleEffect.GuardiansOfTheTemple
                 );
 
             return count > 0;

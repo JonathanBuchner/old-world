@@ -13,37 +13,37 @@ namespace ow_api.Infrastructure.Telemetry
 
         public void TrackEvent<TController>(ControllerTelemetryContext<TController> context)
         {
-            _telemetryTracker.TrackEvent(context.Name, BuildDimensions(context));
+            _telemetryTracker.TrackEvent(context.Name, BuildTags(context));
         }
 
         public void TrackLogError<TController>(ControllerTelemetryContext<TController> context)
         {
-            var dimensions = BuildDimensions(context);
+            var tags = BuildTags(context);
 
-            _telemetryTracker.TrackError(context.Name, dimensions);
+            _telemetryTracker.TrackError(context.Name, tags);
             _logger.LogWarning("Controller telemetry error tracked: {ErrorName}", context.Name);
         }
 
         public void TrackLogException<TController>(ControllerTelemetryContext<TController> context, Exception exception)
         {
-            var dimensions = new Dictionary<string, object?>(context.Dimensions);
-            dimensions["exception.type"] = exception.GetType().Name;
-            dimensions["exception.message"] = exception.Message;
-            context.Dimensions = dimensions;
+            var tags = new Dictionary<string, object?>(context.Tags);
+            tags["exception.type"] = exception.GetType().Name;
+            tags["exception.message"] = exception.Message;
+            context.Tags = tags;
 
-            _telemetryTracker.TrackError(context.Name, BuildDimensions(context));
+            _telemetryTracker.TrackError(context.Name, BuildTags(context));
             _logger.LogWarning(exception, "Controller telemetry exception tracked: {ErrorName}", context.Name);
         }
 
-        private static Dictionary<string, object?> BuildDimensions<TController>(ControllerTelemetryContext<TController> context)
+        private static Dictionary<string, object?> BuildTags<TController>(ControllerTelemetryContext<TController> context)
         {
-            var dimensions = new Dictionary<string, object?>(context.Dimensions);
+            var tags = new Dictionary<string, object?>(context.Tags);
 
-            dimensions["controller"] = typeof(TController).Name;
-            dimensions["action"] = context.ActionName;
-            dimensions["route"] = context.HttpContext.Request.Path.Value;
+            tags["controller"] = typeof(TController).Name;
+            tags["action"] = context.ActionName;
+            tags["route"] = context.HttpContext.Request.Path.Value;
 
-            return dimensions;
+            return tags;
         }
     }
 }
