@@ -46,6 +46,7 @@ namespace ow_api.Controllers
                 {
                     ["json.format.type"] = jsonFormatType.ToString()
                 };
+
                 TrackEvent("listimport.raw.succeeded", nameof(Import), additionalTags);
 
                 return Ok(ApiResponse<ListImportAcceptedResponse>.Ok(new ListImportAcceptedResponse()));
