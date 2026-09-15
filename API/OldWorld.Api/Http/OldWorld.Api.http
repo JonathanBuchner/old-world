@@ -1,0 +1,6 @@
+@OldWorldApi_HostAddress = http://localhost:5038
+
+GET {{OldWorldApi_HostAddress}}/api/v1/admin/ping
+Accept: application/json
+
+###

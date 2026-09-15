@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MSTest" Version="4.2.3" />
+    <ProjectReference Include="..\OldWorld.Api\OldWorld.Api.csproj" />
+    <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
+    <Content Include="..\docs\Domain\dark-elves-basic-test.owb.json" Link="TestData\dark-elves-basic-test.owb.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
