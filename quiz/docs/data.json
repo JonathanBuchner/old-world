@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Deployment Zone Size",
+    "category": "pregame",
+    "difficulty": "veteran",
+    "question": "When playing the Open Battle scenario on a 5 ft × 3 ft table instead of a 6 ft × 4 ft table, how deep should each deployment zone be?",
+    "answer": [
+      "To preserve the Open Battle map's 24-inch gap between deployment zones, make each deployment zone 6 inches deep, measured from its long table edge. The front boundary of each zone remains 12 inches from the centre line, as shown in the map.",
+      "On a 5 ft × 3 ft table, the distance between the long table edges is 36 inches. Leaving a 24-inch gap in the centre gives each deployment zone a depth of (36 − 24) ÷ 2 = 6 inches.",
+      "This is an adaptation of the deployment map to a smaller table, rather than an explicit rule recommending a 5 ft × 3 ft battlefield. The Size of Battlefield rules recommend a minimum of 44 × 60 inches for games of 1,001–3,000 points, so agree on the smaller table with your opponent before playing."
+    ],
+    "commentary": [],
+    "relevant_links": [
+      {
+        "name": "Open Battle — scenario and deployment map",
+        "url": "https://tow.whfb.app/warhammer-battles/open-battle"
+      },
+      {
+        "name": "Size of Battlefield — standard and minimum recommended sizes",
+        "url": "https://tow.whfb.app/warhammer-battles/size-of-battlefield"
+      }
+    ],
+    "question_images": [
+      {
+        "name": "question-open-battle.png",
+        "url": "../img/question-open-battle.png"
+      }
+    ],
+    "answer_images": [
+      {
+        "name": "answer-open-battle.jpg",
+        "url": "../img/answer-open-battle.jpg"
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101010" />
+    <title>TOW Learn the rules</title>
+  </head>
+  <body>
+    <header class="topbar"><a class="brand" href="./">TOW <span>Learn the rules</span></a><nav class="header-nav" aria-label="Main navigation"><a class="nav-link" href="./" aria-current="page">Quiz</a><a class="nav-link" href="./about.html">About</a></nav></header>
+    <p class="navigation-hint">← → to navigate · ↑ to hide answer · ↓ to show answer</p>
+    <main>
+      <div class="toolbar"><div><label for="category">QUESTION TYPE</label><select id="category"><option value="all">All questions</option></select></div><div class="progress"><p id="count" class="muted" aria-live="polite"></p></div></div>
+      <div class="reader"><button id="previous" class="arrow" aria-label="Previous slide" hidden>←</button><article id="card" aria-live="polite"><p class="loading">Loading questions…</p></article><button id="next" class="arrow" aria-label="Next slide" hidden>→</button></div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

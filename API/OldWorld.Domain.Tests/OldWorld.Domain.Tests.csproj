@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="MSTest" Version="4.2.3" />
+    <PackageReference Include="MSTest" Version="4.4.0" />
     <ProjectReference Include="..\OldWorld.Domain\OldWorld.Domain.csproj" />
     <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
