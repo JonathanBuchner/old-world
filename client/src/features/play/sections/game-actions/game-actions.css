@@ -1,0 +1,12 @@
+.game-actions {
+  position: fixed;
+  top: var(--layout-header-height);
+  left: 50%;
+  z-index: 25;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 4px 4px;
+  transform: translateX(-50%);
+}

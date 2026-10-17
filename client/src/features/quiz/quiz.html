@@ -1,0 +1,22 @@
+<section class="quiz-page" aria-label="Learn the rules quiz">
+  <h1 class="quiz-page__title">Learn the rules</h1>
+  <p class="navigation-hint">← → to navigate · ↑ to hide answer · ↓ to show answer</p>
+  <div class="quiz-content">
+    <div class="toolbar">
+      <div>
+        <label for="category">QUESTION TYPE</label>
+        <select id="category">
+          <option value="all">All questions</option>
+        </select>
+      </div>
+      <div class="progress"><p id="count" class="muted" aria-live="polite"></p></div>
+    </div>
+    <div class="reader">
+      <button id="previous" class="arrow" type="button" aria-label="Previous slide" hidden>
+        ←
+      </button>
+      <article id="card" aria-live="polite"><p class="loading">Loading questions…</p></article>
+      <button id="next" class="arrow" type="button" aria-label="Next slide" hidden>→</button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="Old World Table">
+  <rect width="1024" height="1024" rx="230" fill="#fff"/>
+  <g fill="none" stroke="#000" stroke-width="130" stroke-linecap="round">
+    <path d="M512 145v730"/>
+    <path d="M315 395h394"/>
+    <path d="M512 875c96 0 154-48 184-122"/>
+  </g>
+  <rect x="184" y="500" width="656" height="110" rx="32" fill="#fff"/>
+  <text
+    x="512"
+    y="575"
+    fill="#000"
+    font-family="Segoe UI, Arial, sans-serif"
+    font-size="78"
+    font-weight="700"
+    font-variant="small-caps"
+    letter-spacing="0"
+    text-anchor="middle"
+  >Old World Table</text>
+</svg>

@@ -1,0 +1,36 @@
+.table-staging {
+  display: flex;
+  width: 300px;
+  height: 100%;
+  margin-right: 10px;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.staging-panel {
+  border-radius: 4px;
+  background: var(--color-bg-header);
+}
+
+.staging-panel--opponent,
+.staging-panel--player {
+  display: flex;
+  padding: 10px;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.staging-panel--middle {
+  display: flex;
+  height: 100px;
+  padding: 10px;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+}

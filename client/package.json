@@ -1,0 +1,33 @@
+{
+  "name": "ow-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -p tsconfig.json && vite build",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node --test tooling/tests/*.test.mjs",
+    "lint": "eslint --config tooling/eslint.config.js . --max-warnings 0",
+    "format": "prettier --config tooling/prettier.config.json --ignore-path tooling/prettier.ignore --write .",
+    "format:check": "prettier --config tooling/prettier.config.json --ignore-path tooling/prettier.ignore --check .",
+    "test:browser": "playwright test --config tooling/playwright.config.mjs",
+    "test:a11y": "playwright test --config tooling/playwright.config.mjs --grep accessibility",
+    "check": "npm run format:check && npm run lint && npm test && npm run build",
+    "check:all": "npm run check && npm run test:browser",
+    "watch": "npm run dev",
+    "preview": "vite preview --host 127.0.0.1",
+    "serve": "npm run preview"
+  },
+  "prettier": "./tooling/prettier.config.json",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.13.0",
+    "playwright": "^1.64.1",
+    "prettier": "^3.9.10",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.71.2",
+    "vite": "^7.0.0"
+  }
+}

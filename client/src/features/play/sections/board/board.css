@@ -1,0 +1,10 @@
+.table-board {
+  display: flex;
+  height: 100%;
+  align-items: flex-start;
+  min-width: 0;
+  aspect-ratio: 6 / 4;
+  border: 2px solid var(--color-bg-border);
+  border-radius: 4px;
+  background: var(--color-board);
+}

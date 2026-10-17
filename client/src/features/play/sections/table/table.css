@@ -1,0 +1,19 @@
+.table-section {
+  height: calc(100vh - var(--layout-header-height));
+  padding: 10px 15px;
+  background:
+    linear-gradient(var(--color-bg-body-transparent), var(--color-bg-body-transparent)),
+    url("/img/table_background.jpg") center / cover no-repeat,
+    var(--color-bg-body);
+}
+
+.table-frame {
+  display: flex;
+  align-items: stretch;
+  height: min(
+    calc(100vh - var(--layout-header-height) - 20px),
+    calc((100vw - 15px - 15px - 300px - 10px) / 1.5)
+  );
+  width: fit-content;
+  margin: 0 auto;
+}

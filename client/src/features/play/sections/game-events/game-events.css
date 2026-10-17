@@ -1,0 +1,61 @@
+.game-events {
+  border-radius: 4px;
+  position: fixed;
+  top: calc(var(--layout-header-height) + 32px);
+  left: 0;
+  z-index: 24;
+  display: none;
+  width: 300px;
+  min-width: 200px;
+  max-width: 600px;
+  height: 80vh;
+  max-height: calc(100vh - 110px);
+  padding: 10px;
+  overflow: auto;
+  resize: horizontal;
+}
+
+.game-events.is-open {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-events__close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--color-button);
+  cursor: pointer;
+}
+
+.game-events__close:hover,
+.game-events__close:focus-visible {
+  color: var(--color-selected-accent);
+}
+
+.game-events__list {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 0;
+  padding-top: 24px;
+}
+
+.game-events__event {
+  max-width: 85%;
+}
+
+.game-events__event--left {
+  align-self: flex-start;
+}
+
+.game-events__event--right {
+  align-self: flex-end;
+}

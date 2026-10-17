@@ -1,0 +1,81 @@
+<header class="app-header" data-header-section>
+  <div class="app-header__dropdown" data-dropdown>
+    <button
+      class="app-header__menu text-desk-nav"
+      type="button"
+      aria-label="Open menu"
+      aria-haspopup="menu"
+      aria-expanded="false"
+      data-dropdown-trigger
+    >
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+      <span>Menu</span>
+    </button>
+
+    <div class="app-header__menu-panel" role="menu" data-dropdown-menu hidden>
+      <button
+        class="app-header__menu-item text-desk-link"
+        type="button"
+        role="menuitem"
+        data-modal-target="settings"
+      >
+        <i class="fa-solid fa-gear" aria-hidden="true"></i>
+        Settings
+      </button>
+      <button
+        class="app-header__menu-item text-desk-link"
+        type="button"
+        role="menuitem"
+        data-modal-target="help"
+      >
+        <i class="fa-solid fa-question" aria-hidden="true"></i>
+        Help
+      </button>
+      <button
+        class="app-header__menu-item text-desk-link"
+        type="button"
+        role="menuitem"
+        data-modal-target="about"
+      >
+        <i class="fa-solid fa-info" aria-hidden="true"></i>
+        About
+      </button>
+      <button
+        class="app-header__menu-item text-desk-link"
+        type="button"
+        role="menuitem"
+        data-modal-target="contribute"
+      >
+        <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+        Contribute
+      </button>
+      <button
+        class="app-header__menu-item text-desk-link"
+        type="button"
+        role="menuitem"
+        data-modal-target="change-log"
+      >
+        <i class="fa-solid fa-wrench"></i>
+        Change Log
+      </button>
+    </div>
+  </div>
+
+  <span class="app-header__brand text-site-name" aria-label="Old World Table home">
+    Old World Table
+  </span>
+
+  <div class="app-header__actions">
+    <nav class="app-header__nav" aria-label="Main navigation">
+      <a class="app-header__link text-desk-nav" href="./index.html" data-page-link="play">Play</a>
+      <a class="app-header__link text-desk-nav" href="./calculator.html" data-page-link="calculator"
+        >Calculator</a
+      >
+      <a class="app-header__link text-desk-nav" href="./quiz.html" data-page-link="quiz">Quiz</a>
+    </nav>
+    <button class="app-header__login text-desk-nav" type="button" aria-label="Log in">
+      <i class="fa-solid fa-circle-user" aria-hidden="true"></i>
+      <span>Login</span>
+    </button>
+  </div>
+</header>

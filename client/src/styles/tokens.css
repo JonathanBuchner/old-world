@@ -1,0 +1,62 @@
+:root {
+  color-scheme: dark;
+
+  --color-headers: #d2d2d2;
+  --color-nav: #fafafa;
+  --color-body: #e6e6e6;
+  --color-button: #fafafa;
+  --color-link: #fafafa;
+  --color-bg-header: #1e1e1e;
+  --color-bg-body: #282828;
+  --color-bg-body-transparent: #282828bf;
+  --color-bg-border: #282828;
+  --color-overlay: #00000080;
+  --color-panel-transparent: #00000099;
+  --color-action-hover: #000000e6;
+  --color-primary: #e6e0d8;
+  --color-primary-muted: #a8a29a;
+  --color-selected: #0a6ed7;
+  --color-selected-accent: #5aaaf5;
+  --color-accent: #2d8c5a;
+  --color-highlight: #f5b405;
+  --color-board: #536b43;
+
+  --color-black: #000;
+  --color-surface-input: #101010;
+  --color-surface-panel: #181818;
+  --color-surface-card: #1a1a1a;
+  --color-surface-control: #303030;
+  --color-control-hover: #3b3b3b;
+  --color-border: #383838;
+  --color-border-muted: #4a4a4a;
+  --color-border-input: #555;
+  --color-border-emphasis: #777;
+  --color-text-subtle: #999;
+  --color-text-muted: #aaa;
+  --color-text-secondary: #bcbcbc;
+  --color-failure: #b42318;
+  --color-warning: #c76a14;
+
+  --font-family-segoe-ui: "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+
+  --font-weight-segoe-ui-semibold: 600;
+  --font-weight-segoe-ui-bold: 700;
+  --font-weight-segoe-ui-regular: 400;
+  --font-weight-segoe-ui-italic: 400;
+  --font-style-segoe-ui-italic: italic;
+
+  --font-size-small: 10px;
+  --font-size-regular: 11px;
+  --font-size-large: 13px;
+  --font-size-h3: 16px;
+  --font-size-h2: 20px;
+  --font-size-h1: 24px;
+  --font-size-site-name-size: 16px;
+
+  --letter-spacing-regular: 0;
+  --paragraph-spacing-0: 0;
+  --paragraph-indent-0: 0;
+  --line-height-auto: normal;
+  --line-height-site-name: 16px;
+  --layout-header-height: 42px;
+}
