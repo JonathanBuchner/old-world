@@ -85,7 +85,7 @@ public class MigrationTests
         await startup.StartAsync(CancellationToken.None);
         Assert.IsTrue(services.GetRequiredService<IGameRulesCatalogProvider>().Get(Version).Rules.ContainsKey("test-rule"));
         Assert.AreEqual(Version, services.GetRequiredService<IGameRulesEngineProvider>().Get(Version).Catalog.GameVersion);
-        _ = ActivatorUtilities.CreateInstance<AdminController>(services);
+        _ = ActivatorUtilities.CreateInstance<HealthController>(services);
         _ = ActivatorUtilities.CreateInstance<ListImportController>(services);
         _ = ActivatorUtilities.CreateInstance<GameCatalogController>(services);
     }
